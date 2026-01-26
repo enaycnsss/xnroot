@@ -138,6 +138,34 @@
     .phase-card:hover {
       transform: translateY(-5px);
     }
+
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      font-size: 0.9em;
+      vertical-align: middle;
+    }
+
+    .frac .num,
+    .frac .den {
+      padding: 0 0.12em;
+      white-space: nowrap;
+    }
+
+    .frac .bar {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.7);
+      margin: 0.1em 0;
+    }
+
+    sup.sup-frac {
+      font-size: 0.7em;
+      line-height: 1;
+      vertical-align: super;
+    }
   </style>
   <style>
     @view-transition {
@@ -323,34 +351,49 @@
               </div>
               <div class="mt-4 space-y-3">
                 <div class="p-6 bg-black/30 rounded-lg">
-                  <p class="text-2xl md:text-3xl font-bold text-center mb-3" id="fr-result">16^(1/2) = √16 = 4</p>
-                  <p class="text-base md:text-lg text-gray-400 text-center" id="fr-explanation">a^(m/n) = nv(a?) atau
-                    (nva)?</p>
+                  <p class="text-2xl md:text-3xl font-bold text-center mb-3" id="fr-result">16<sup
+                      class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span
+                          class="den">2</span></span></sup> = √16 = 4</p>
+                  <p class="text-base md:text-lg text-gray-400 text-center" id="fr-explanation">a<sup
+                      class="sup-frac"><span class="frac"><span class="num">m</span><span class="bar"></span><span
+                          class="den">n</span></span></sup> = <sup>n</sup>v(a<sup>m</sup>) atau
+                    (<sup>n</sup>v(a))<sup>m</sup></p>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3"><button onclick="setFractionExample(16, 1, 2)"
                     class="bg-green-500/20 border border-green-500/30 rounded-lg px-3 py-3 hover:bg-green-500/30 transition-all">
                     <p class="font-bold text-green-300 text-sm">√16</p>
-                    <p class="text-xs text-gray-400">16^(1/2)</p>
+                    <p class="text-xs text-gray-400">16<sup class="sup-frac"><span class="frac"><span
+                            class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup></p>
                   </button> <button onclick="setFractionExample(27, 1, 3)"
                     class="bg-blue-500/20 border border-blue-500/30 rounded-lg px-3 py-3 hover:bg-blue-500/30 transition-all">
                     <p class="font-bold text-blue-300 text-sm">³√27</p>
-                    <p class="text-xs text-gray-400">27^(1/3)</p>
+                    <p class="text-xs text-gray-400">27<sup class="sup-frac"><span class="frac"><span
+                            class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup></p>
                   </button> <button onclick="setFractionExample(8, 2, 3)"
                     class="bg-purple-500/20 border border-purple-500/30 rounded-lg px-3 py-3 hover:bg-purple-500/30 transition-all">
-                    <p class="font-bold text-purple-300 text-sm">8^(2/3)</p>
+                    <p class="font-bold text-purple-300 text-sm">8<sup class="sup-frac"><span class="frac"><span
+                            class="num">2</span><span class="bar"></span><span class="den">3</span></span></sup></p>
                     <p class="text-xs text-gray-400">(³√8)²</p>
                   </button> <button onclick="setFractionExample(4, 3, 2)"
                     class="bg-pink-500/20 border border-pink-500/30 rounded-lg px-3 py-3 hover:bg-pink-500/30 transition-all">
-                    <p class="font-bold text-pink-300 text-sm">4^(3/2)</p>
+                    <p class="font-bold text-pink-300 text-sm">4<sup class="sup-frac"><span class="frac"><span
+                            class="num">3</span><span class="bar"></span><span class="den">2</span></span></sup></p>
                     <p class="text-xs text-gray-400">(√4)³</p>
                   </button>
                 </div>
                 <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-500/20">
                   <p class="text-sm font-semibold text-purple-300 mb-2">💡 Tips Perhitungan:</p>
                   <ul class="text-xs md:text-sm text-gray-300 space-y-1">
-                    <li>• a^(1/n) = ⁿ√a (pangkat 1/n sama dengan akar pangkat n)</li>
-                    <li>• a^(m/n) = ⁿ√(aᵐ) = (ⁿ√a)ᵐ (bisa hitung pangkat dulu atau akar dulu)</li>
-                    <li>• Contoh: 8^(2/3) = ³√(8²) = ³√64 = 4 ATAU (³√8)² = 2² = 4</li>
+                    <li>• a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span
+                            class="bar"></span><span class="den">n</span></span></sup> = ⁿ√a (pangkat <span
+                        class="frac"><span class="num">1</span><span class="bar"></span><span
+                          class="den">n</span></span> sama dengan akar pangkat n)</li>
+                    <li>• a<sup class="sup-frac"><span class="frac"><span class="num">m</span><span
+                            class="bar"></span><span class="den">n</span></span></sup> = ⁿ√(aᵐ) = (ⁿ√a)ᵐ (bisa hitung
+                      pangkat dulu atau akar dulu)</li>
+                    <li>• Contoh: 8<sup class="sup-frac"><span class="frac"><span class="num">2</span><span
+                            class="bar"></span><span class="den">3</span></span></sup> = ³√(8²) = ³√64 = 4 ATAU (³√8)² =
+                      2² = 4</li>
                   </ul>
                 </div>
               </div>
@@ -1255,11 +1298,11 @@
                 <li>• 2² = 4 (jam ke-2, dibagi 2)</li>
                 <li>• 2¹ = 2 (jam ke-1, dibagi 2 lagi)</li>
                 <li>• × = ? (jam ke-0, mungkin dibagi 2 lagi = 1?)</li>
-                <li>• 2⁻¹ = ? (1 jam sebelum isi, mungkin 1/2?)</li>
+                <li>• 2⁻¹ = ? (1 jam sebelum isi, mungkin <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span>?)</li>
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-green-300 mb-2">💡 Hipotesis:</p>
-            <p class="text-base md:text-lg">"Setiap pangkat turun 1, hasilnya dibagi basis. Maka × = 1dan 2⁻¹ = 1/2!"</p>
+            <p class="text-base md:text-lg">"Setiap pangkat turun 1, hasilnya dibagi basis. Maka × = 1dan 2⁻¹ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span>!"</p>
           </div>
           
           <!-- Fase 3: Mengumpulkan Data -->
@@ -1302,7 +1345,7 @@
             <div class="bg-black/20 p-4 rounded-lg">
               <p class="text-base md:text-lg mb-2"><strong>Pangkat Negatif:</strong></p>
               <ul class="space-y-2 ml-4">
-                <li>✓ 2⁻¹ = 1/2 = 0.5 ✅</li>
+                <li>✓ 2⁻¹ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span> = 0.5 ✅</li>
                 <li>✓ × = 1/4 = 0.25 ✅</li>
                 <li>✓ 2⁻³ = 1/8 = 0.125 ✅</li>
               </ul>
@@ -1355,7 +1398,7 @@
               <p class="text-base md:text-lg">📌 Jadi: sisi³ = 27</p>
               <p class="text-base md:text-lg mt-2">Kita tahu sisi = ³√27 = 3 (karena 3³ = 27)</p>
             </div>
-            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Bagaimana dengan 27^(1/3)? Apakah sama dengan ³√27? Apa hubungan pangkat pecahan dengan akar?</p>
+            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Bagaimana dengan 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup>? Apakah sama dengan ³√27? Apa hubungan pangkat pecahan dengan akar?</p>
             <p class="text-sm md:text-base text-gray-400 mt-2 italic">💡 Pikirkan: Mungkinkah ada pola matematika di sini?</p>
           </div>
           
@@ -1368,27 +1411,27 @@
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <ul class="space-y-2 text-base md:text-lg">
                 <li>📌 ³√27 adalah bilangan yang jika dipangkatkan 3 = 27</li>
-                <li>📌 Jika 27^(1/3) × 27^(1/3) × 27^(1/3) = 27^(1/3 + 1/3 + 1/3) = 27¹ = 27</li>
-                <li>📌 Berarti 27^(1/3) adalah bilangan yang dipangkatkan 3 = 27</li>
+                <li>📌 Jika 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> × 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> × 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 27¹ = 27</li>
+                <li>📌 Berarti 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> adalah bilangan yang dipangkatkan 3 = 27</li>
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-green-300 mb-2">🎯 Hipotesis:</p>
-            <p class="text-base md:text-lg">"Mungkin a^(1/n) = <sup>n</sup>va ! Pangkat pecahan 1/n sama dengan akar pangkat n!"</p>
+            <p class="text-base md:text-lg">"Mungkin a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>va! Pangkat pecahan <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span> sama dengan akar pangkat n!"</p>
           </div>
           
           <!-- Fase 3: Mengumpulkan Data -->
           <div class="bg-yellow-500/10 p-5 rounded-lg border border-yellow-500/30">
             <p class="font-bold text-lg text-yellow-300 mb-3 flex items-center gap-2">
-              <span>3🔬</span> Mengumpulkan Data
+              <span>3🔬</span> Mengumpuylkan Data
             </p>
             <p class="text-base md:text-lg mb-3">🧪 <strong>Eksperimen:</strong> Coba dengan kalkulator eksplorasi!</p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <p class="text-base md:text-lg mb-2"><strong>Coba hitung:</strong></p>
               <ul class="list-disc list-inside space-y-1 ml-4 text-base md:text-lg">
-                <li>16^(1/2) = ? (bandingkan dengan √16)</li>
-                <li>16^(1/4) = ? (bandingkan dengan ⁴√16)</li>
-                <li>8^(1/3) = ? (bandingkan dengan ³√8)</li>
-                <li>4^(3/2) = ? (coba √(4³) atau (√4)³)</li>
+                <li>16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup> = ? (bandingkan dengan √16)</li>
+                <li>16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">4</span></span></sup> = ? (bandingkan dengan ⁴√16)</li>
+                <li>8<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = ? (bandingkan dengan ³√8)</li>
+                <li>4<sup class="sup-frac"><span class="frac"><span class="num">3</span><span class="bar"></span><span class="den">2</span></span></sup> = ? (coba √(4³) atau (√4)³)</li>
               </ul>
             </div>
             <p class="text-base md:text-lg italic text-gray-400">💡 Tip: Perhatikan apakah hasilnya sama dengan operasi akar!</p>
@@ -1402,10 +1445,10 @@
             <p class="text-base md:text-lg mb-3">📊 <strong>Hasil Pengujian:</strong></p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <ul class="space-y-2 ml-4 text-base md:text-lg">
-                <li>✓ 16^(1/2) = 4 = √16 ✅</li>
-                <li>✓ 16^(1/4) = 2 = ⁴√16 ✅</li>
-                <li>✓ 8^(1/3) = 2 = ³√8 ✅</li>
-                <li>✓ 4^(3/2) = (√4)³ = 2³ = 8 ✅</li>
+                <li>✓ 16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup> = 4 = √16 ✅</li>
+                <li>✓ 16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">4</span></span></sup> = 2 = ⁴√16 ✅</li>
+                <li>✓ 8<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 2 = ³√8 ✅</li>
+                <li>✓ 4<sup class="sup-frac"><span class="frac"><span class="num">3</span><span class="bar"></span><span class="den">2</span></span></sup> = (√4)³ = 2³ = 8 ✅</li>
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-purple-300">✅ Hipotesis terbukti! Ada hubungan pasti antara pangkat pecahan dan akar!</p>
@@ -1418,23 +1461,23 @@
             </p>
             <div class="bg-black/30 p-4 rounded-lg mb-3">
               <p class="font-bold mb-2">📝 Kesimpulan 1:</p>
-              <p class="text-lg md:text-xl mb-2">a<sup>1/n</sup> = <sup>n</sup>va</p>
-              <p class="text-base text-gray-300">Pangkat 1/n sama dengan akar pangkat n</p>
+              <p class="text-lg md:text-xl mb-2">a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>va</p>
+              <p class="text-base text-gray-300">Pangkat <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span> sama dengan akar pangkat n</p>
             </div>
             <div class="bg-black/30 p-4 rounded-lg mb-4">
               <p class="font-bold mb-2">📝 Kesimpulan 2:</p>
-              <p class="text-lg md:text-xl mb-2">a<sup>m/n</sup> = <sup>n</sup>v(a<sup>m</sup>) = (<sup>n</sup>va)<sup>m</sup></p>
-              <p class="text-base text-gray-300">Untuk pangkat pecahan umum m/n</p>
+              <p class="text-lg md:text-xl mb-2">a<sup class="sup-frac"><span class="frac"><span class="num">m</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>v(a<sup>m</sup>) = (<sup>n</sup>va)<sup>m</sup></p>
+              <p class="text-base text-gray-300">Untuk pangkat pecahan umum <span class="frac"><span class="num">m</span><span class="bar"></span><span class="den">n</span></span></p>
             </div>
             <div class="bg-black/30 p-4 rounded-lg">
               <p class="text-base md:text-lg font-bold mb-3">🌍 Aplikasi Nyata:</p>
               <ul class="space-y-3 text-base md:text-lg">
                 <li><strong>🏗️ Arsitektur:</strong> Menghitung dimensi ruangan dari volume/luas</li>
                 <li><strong>📐 Geometri:</strong> Diagonal persegi = sisi × √2</li>
-                <li><strong>🎵 Musik:</strong> Interval nada: 2^(1/12), 2^(2/12), dst.</li>
+                <li><strong>🎵 Musik:</strong> Interval nada: 2<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">12</span></span></sup>, 2<sup class="sup-frac"><span class="frac"><span class="num">2</span><span class="bar"></span><span class="den">12</span></span></sup>, dst.</li>
                 <li><strong>⚡ Fisika:</strong> Kecepatan gelombang = √(tegangan/massa)</li>
                 <li><strong>📊 Statistik:</strong> Standar deviasi = √(varians)</li>
-                <li><strong>💰 Keuangan:</strong> Rata-rata geometrik: (a×b)^(1/2)</li>
+                <li><strong>💰 Keuangan:</strong> Rata-rata geometrik: (a×b)<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup></li>
               </ul>
             </div>
           </div>
@@ -1777,20 +1820,39 @@
       trackExperiment();
     }
 
+    function formatFractionHTML(numerator, denominator) {
+      return `<span class="frac"><span class="num">${numerator}</span><span class="bar"></span><span class="den">${denominator}</span></span>`;
+    }
+
+    function formatPowerWithFractionHTML(base, numerator, denominator) {
+      return `${base}<sup class="sup-frac">${formatFractionHTML(numerator, denominator)}</sup>`;
+    }
+
+    function formatMathText(text) {
+      if (!text) return '';
+      let formatted = text.replace(/(\d+)\^\((\d+)\/(\d+)\)/g, (match, base, numerator, denominator) => {
+        return `${base}<sup class="sup-frac">${formatFractionHTML(numerator, denominator)}</sup>`;
+      });
+      formatted = formatted.replace(/(\d+)\/(\d+)/g, (match, numerator, denominator) => {
+        return formatFractionHTML(numerator, denominator);
+      });
+      return formatted;
+    }
+
     function calculateFractionRoot() {
       const base = parseFloat(document.getElementById('fr-base').value) || 16;
       const numerator = parseInt(document.getElementById('fr-numerator').value) || 1;
       const denominator = parseInt(document.getElementById('fr-denominator').value) || 2;
 
       if (denominator === 0) {
-        document.getElementById('fr-result').textContent = "Error: Penyebut tidak boleh 0";
-        document.getElementById('fr-explanation').textContent = "Pembagian dengan nol tidak terdefinisi";
+        document.getElementById('fr-result').innerHTML = "Error: Penyebut tidak boleh 0";
+        document.getElementById('fr-explanation').innerHTML = "Pembagian dengan nol tidak terdefinisi";
         return;
       }
 
       if (base < 0 && denominator % 2 === 0) {
-        document.getElementById('fr-result').textContent = "Error: Akar genap dari bilangan negatif";
-        document.getElementById('fr-explanation').textContent = "Dalam bilangan real, tidak bisa menghitung akar genap dari bilangan negatif";
+        document.getElementById('fr-result').innerHTML = "Error: Akar genap dari bilangan negatif";
+        document.getElementById('fr-explanation').innerHTML = "Dalam bilangan real, tidak bisa menghitung akar genap dari bilangan negatif";
         return;
       }
 
@@ -1801,18 +1863,19 @@
       let explanation = '';
 
       // Format the display
-      const fractionDisplay = numerator === 1 ? `1/${denominator}` : `${numerator}/${denominator}`;
+      const exponentHTML = formatPowerWithFractionHTML(base, numerator, denominator);
 
       if (numerator === 1) {
         // Simple root case
         const rootSymbol = denominator === 2 ? 'v' : `${getSuperscript(denominator)}v`;
-        calculation = `${base}^(1/${denominator}) = ${rootSymbol}${base} = ${result.toFixed(4)}`;
+        const simpleExponentHTML = formatPowerWithFractionHTML(base, 1, denominator);
+        calculation = `${simpleExponentHTML} = ${rootSymbol}${base} = ${result.toFixed(4)}`;
 
         if (Number.isInteger(result)) {
-          calculation = `${base}^(1/${denominator}) = ${rootSymbol}${base} = ${Math.round(result)}`;
-          explanation = `${base} pangkat 1/${denominator} sama dengan akar pangkat ${denominator} dari ${base}`;
+          calculation = `${simpleExponentHTML} = ${rootSymbol}${base} = ${Math.round(result)}`;
+          explanation = `${base} pangkat ${formatFractionHTML(1, denominator)} sama dengan akar pangkat ${denominator} dari ${base}`;
         } else {
-          explanation = `${base} pangkat 1/${denominator} sama dengan akar pangkat ${denominator} dari ${base} (2⁻² ${result.toFixed(4)})`;
+          explanation = `${base} pangkat ${formatFractionHTML(1, denominator)} sama dengan akar pangkat ${denominator} dari ${base} (2⁻² ${result.toFixed(4)})`;
         }
       } else {
         // Complex fraction case
@@ -1820,18 +1883,20 @@
         const finalResult = Math.pow(rootValue, numerator);
 
         const rootSymbol = denominator === 2 ? 'v' : `${getSuperscript(denominator)}v`;
+        const rootBaseHTML = `${rootSymbol}${base}`;
+        const rootPowerHTML = `(${rootBaseHTML})<sup>${numerator}</sup>`;
 
         if (Number.isInteger(result)) {
-          calculation = `${base}^(${fractionDisplay}) = (${rootSymbol}${base})^${numerator} = ${Math.round(result)}`;
+          calculation = `${exponentHTML} = ${rootPowerHTML} = ${Math.round(result)}`;
         } else {
-          calculation = `${base}^(${fractionDisplay}) = (${rootSymbol}${base})^${numerator} × ${result.toFixed(4)}`;
+          calculation = `${exponentHTML} = ${rootPowerHTML} × ${result.toFixed(4)}`;
         }
 
-        explanation = `Ada 2 cara: (1) Akar dulu: (${rootSymbol}${base})^${numerator} ATAU (2) Pangkat dulu: ${rootSymbol}(${base}^${numerator})`;
+        explanation = `Ada 2 cara: (1) Akar dulu: ${rootPowerHTML} ATAU (2) Pangkat dulu: ${rootSymbol}(${base}<sup>${numerator}</sup>)`;
       }
 
-      document.getElementById('fr-result').textContent = calculation;
-      document.getElementById('fr-explanation').textContent = explanation;
+      document.getElementById('fr-result').innerHTML = calculation;
+      document.getElementById('fr-explanation').innerHTML = explanation;
 
       trackExperiment();
     }
@@ -2184,14 +2249,14 @@
       document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
       document.getElementById('question-progress').style.width = `${((currentQuestionIndex + 1) / currentQuestions.length) * 100}%`;
       document.getElementById('orientation-text').textContent = question.orientation || 'Pahami konteks masalah ini dengan baik.';
-      document.getElementById('question-text').textContent = question.q;
+      document.getElementById('question-text').innerHTML = formatMathText(question.q);
       document.getElementById('hint-text').textContent = question.hint || 'Pikirkan langkah-langkah penyelesaiannya.';
       document.getElementById('feedback-container').classList.add('hidden');
 
       const optionsContainer = document.getElementById('options-container');
       optionsContainer.innerHTML = question.options.map((option, index) => `
         <button onclick="checkAnswer(${index})" class="option-btn w-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 rounded-xl p-4 text-left hover:bg-indigo-500/30 transition-all">
-          <span class="font-bold text-indigo-300">${String.fromCharCode(65 + index)}.</span> ${option}
+          <span class="font-bold text-indigo-300">${String.fromCharCode(65 + index)}.</span> ${formatMathText(option)}
         </button>
       `).join('');
     }
@@ -2241,7 +2306,7 @@
         document.getElementById('feedback-title').className = 'text-xl font-bold mb-2 text-red-400';
       }
 
-      document.getElementById('feedback-text').textContent = explanation;
+      document.getElementById('feedback-text').innerHTML = formatMathText(explanation);
     }
 
     function startTimer() {
