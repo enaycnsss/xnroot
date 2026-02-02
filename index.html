@@ -798,6 +798,49 @@
               </p>
             </div>
           </div>
+          <div class="mt-8 space-y-6">
+            <h4 class="text-xl md:text-2xl font-bold text-indigo-300 flex items-center gap-2"><span>🧭</span> Petunjuk
+              Fitur</h4>
+            <div
+              class="phase-card bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl p-6 border border-cyan-500/30 cursor-pointer"
+              onclick="toggleGuideItem('guide-exploration')">
+              <div class="flex items-center justify-between mb-3">
+                <h5 class="text-lg md:text-xl font-bold text-cyan-300">FITUR EKSPLORASI INTERAKTIF</h5>
+                <span id="guide-exploration-icon" class="text-2xl">➕</span>
+              </div>
+              <p class="text-sm md:text-base text-gray-300">Digunakan untuk memahami konsep perpangkatan dan akar
+                melalui
+                percobaan langsung.</p>
+              <div id="guide-exploration-content" class="hidden mt-4 bg-black/20 rounded-lg p-5">
+                <p class="text-sm md:text-base text-white font-semibold mb-3">Langkah:</p>
+                <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                  <li>Pilih menu Eksplorasi Interaktif</li>
+                  <li>Pilih materi</li>
+                  <li>Masukkan angka</li>
+                  <li>Amati hasil</li>
+                </ol>
+              </div>
+            </div>
+            <div
+              class="phase-card bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30 cursor-pointer"
+              onclick="toggleGuideItem('guide-game')">
+              <div class="flex items-center justify-between mb-3">
+                <h5 class="text-lg md:text-xl font-bold text-purple-300">FITUR GAME LEVEL</h5>
+                <span id="guide-game-icon" class="text-2xl">➕</span>
+              </div>
+              <p class="text-sm md:text-base text-gray-300">Digunakan untuk menguji pemahaman materi.</p>
+              <div id="guide-game-content" class="hidden mt-4 bg-black/20 rounded-lg p-5">
+                <p class="text-sm md:text-base text-white font-semibold mb-3">Langkah:</p>
+                <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                  <li>Log in dengan memasukkan username kalian</li>
+                  <li>Pilih Game Level</li>
+                  <li>Pilih level</li>
+                  <li>Jawab soal</li>
+                  <li>Lihat skor</li>
+                </ol>
+              </div>
+            </div>
+          </div>
         </div>
       </section><!-- Leaderboard Section -->
       <section id="leaderboard-section" class="hidden">
@@ -1032,7 +1075,7 @@
     const defaultConfig = {
       app_title: 'XnRoot',
       welcome_title: 'Selamat Datang di XnRoot!',
-      welcome_description: 'Petualangan matematika interaktif dengan pendekatan inkuiri. Pelajari perpangkatan dan bentuk akar sambil bermain!'
+      welcome_description: 'Agar pengalaman belajarmu lebih maksimal, silakan baca terlebih dahulu Petunjuk Bermain pada menu Petunjuk 📖 sebelum memulai'
     };
 
     // ==================== UI Sounds ====================
@@ -1176,7 +1219,7 @@
           <!-- Fase 1: Orientasi Masalah -->
           <div class="bg-blue-500/10 p-5 rounded-lg border border-blue-500/30">
             <p class="font-bold text-lg text-cyan-300 mb-3 flex items-center gap-2">
-              <span>1️⃣</span> Orientasi Masalah
+              <span>1️⃣</span> Orientasi dan Merumuskan Masalah
             </p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">📱 Kasus: Viral di Media Sosial</p>
@@ -1273,7 +1316,7 @@
           <!-- Fase 1: Orientasi Masalah -->
           <div class="bg-blue-500/10 p-5 rounded-lg border border-blue-500/30">
             <p class="font-bold text-lg text-cyan-300 mb-3 flex items-center gap-2">
-              <span>1️⃣</span> Orientasi Masalah
+              <span>1️⃣</span> Orientasi dan Merumuskan Masalah
             </p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">🔋 Kasus: Pembagian Baterai HP</p>
@@ -1302,7 +1345,7 @@
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-green-300 mb-2">💡 Hipotesis:</p>
-            <p class="text-base md:text-lg">"Setiap pangkat turun 1, hasilnya dibagi basis. Maka × = 1dan 2⁻¹ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span>!"</p>
+            <p class="text-base md:text-lg">"Setiap pangkat turun 1, hasilnya dibagi basis. Maka × = 1 dan 2⁻¹ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span>!"</p>
           </div>
           
           <!-- Fase 3: Mengumpulkan Data -->
@@ -1346,8 +1389,8 @@
               <p class="text-base md:text-lg mb-2"><strong>Pangkat Negatif:</strong></p>
               <ul class="space-y-2 ml-4">
                 <li>✓ 2⁻¹ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span> = 0.5 ✅</li>
-                <li>✓ × = 1/4 = 0.25 ✅</li>
-                <li>✓ 2⁻³ = 1/8 = 0.125 ✅</li>
+                <li>✓ × = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">4</span></span> = 0.25 ✅</li>
+                <li>✓ 2⁻³ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">8</span></span> = 0.125 ✅</li>
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-purple-300 mt-3">✅ Hipotesis terbukti benar!</p>
@@ -1365,7 +1408,7 @@
             </div>
             <div class="bg-black/30 p-4 rounded-lg mb-4">
               <p class="font-bold mb-2">📝 Kesimpulan Pangkat Negatif:</p>
-              <p class="text-lg md:text-xl mb-2">a<sup>-n</sup> = 1/a<sup>n</sup></p>
+              <p class="text-lg md:text-xl mb-2">a<sup>-n</sup> = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">a<sup>n</sup></span></span></p>
               <p class="text-base text-gray-300">Pangkat negatif = kebalikan dari pangkat positif</p>
             </div>
             <div class="bg-black/30 p-4 rounded-lg">
@@ -1389,7 +1432,7 @@
           <!-- Fase 1: Orientasi Masalah -->
           <div class="bg-blue-500/10 p-5 rounded-lg border border-blue-500/30">
             <p class="font-bold text-lg text-cyan-300 mb-3 flex items-center gap-2">
-              <span>1🎯</span> Orientasi Masalah
+              <span>1🎯</span> Orientasi dan Merumuskan Masalah
             </p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">📦 Kasus: Menghitung Sisi Kotak</p>
@@ -1416,7 +1459,7 @@
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-green-300 mb-2">🎯 Hipotesis:</p>
-            <p class="text-base md:text-lg">"Mungkin a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>va! Pangkat pecahan <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span> sama dengan akar pangkat n!"</p>
+            <p class="text-base md:text-lg">"Mungkin a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>√a! Pangkat pecahan <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span> sama dengan akar pangkat n!"</p>
           </div>
           
           <!-- Fase 3: Mengumpulkan Data -->
@@ -1461,12 +1504,12 @@
             </p>
             <div class="bg-black/30 p-4 rounded-lg mb-3">
               <p class="font-bold mb-2">📝 Kesimpulan 1:</p>
-              <p class="text-lg md:text-xl mb-2">a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>va</p>
+              <p class="text-lg md:text-xl mb-2">a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>√a</p>
               <p class="text-base text-gray-300">Pangkat <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span> sama dengan akar pangkat n</p>
             </div>
             <div class="bg-black/30 p-4 rounded-lg mb-4">
               <p class="font-bold mb-2">📝 Kesimpulan 2:</p>
-              <p class="text-lg md:text-xl mb-2">a<sup class="sup-frac"><span class="frac"><span class="num">m</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>v(a<sup>m</sup>) = (<sup>n</sup>va)<sup>m</sup></p>
+              <p class="text-lg md:text-xl mb-2">a<sup class="sup-frac"><span class="frac"><span class="num">m</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>√(a<sup>m</sup>) = (<sup>n</sup>√a)<sup>m</sup></p>
               <p class="text-base text-gray-300">Untuk pangkat pecahan umum <span class="frac"><span class="num">m</span><span class="bar"></span><span class="den">n</span></span></p>
             </div>
             <div class="bg-black/30 p-4 rounded-lg">
@@ -1488,40 +1531,40 @@
     // ==================== Question Bank ====================
     const questionBank = {
       1: [
-        { q: "Sebuah koloni bakteri membelah diri setiap jam. Jika awalnya ada 3 bakteri, berapa jumlahnya setelah 4 jam?", options: ["12", "27", "48", "81"], correct: 3, explanation: "34 = 3 × 3 × 3 × 3 = 81 bakteri" },
-        { q: "Seorang atlet lari menggandakan jarak larinya setiap hari. Hari pertama 2 km. Berapa km di hari ke-5?", options: ["16", "32", "64", "128"], correct: 1, explanation: "2 × 24 = 2 × 16 = 32 km" },
-        { q: "Sebuah video viral dibagikan 5 orang, kemudian masing-masing membagikan ke 5 orang lagi. Total berapa orang setelah 2 putaran?", options: ["10", "25", "30", "125"], correct: 2, explanation: "5 + 5² = 5 + 25 = 30 orang (5 putaran pertama + 25 putaran kedua)" },
-        { q: "Harga tanah naik 2 kali lipat setiap 10 tahun. Jika sekarang 100 juta, berapa setelah 30 tahun?", options: ["400 juta", "600 juta", "800 juta", "1000 juta"], correct: 2, explanation: "100 × 2³ = 100 × 8 = 800 juta" },
-        { q: "Hitunglah: 4² + 3² = ?", options: ["25", "49", "144", "169"], correct: 0, explanation: "4² + 3² = 16 + 9 = 25" },
-        { q: "Sebuah kertas dilipat menjadi 2 bagian, lalu dilipat lagi, begitu seterusnya 6 kali. Berapa bagian?", options: ["32", "64", "128", "256"], correct: 1, explanation: "26 = 64 bagian" },
-        { q: "Luas persegi dengan sisi 7 cm adalah?", options: ["14 cm²", "28 cm²", "49 cm²", "56 cm²"], correct: 2, explanation: "7² = 49 cm²" },
-        { q: "Jika 2² × 2³ = 2n, maka n = ?", options: ["5", "6", "8", "12"], correct: 0, explanation: "2²×2³ = 25, jadi n = 5" },
-        { q: "Volume kubus dengan rusuk 3 cm adalah?", options: ["9 cm²", "18 cm²", "27 cm²", "81 cm²"], correct: 2, explanation: "3³ = 27 cm²" },
-        { q: "Populasi kota bertambah 2 kali lipat setiap 5 tahun. Jika sekarang 1000 orang, berapa setelah 15 tahun?", options: ["4000", "6000", "8000", "16000"], correct: 2, explanation: "1000 × 2³ = 1000 × 8 = 8000 orang" }
+        { q: "Adi memiliki 4 kotak pensil. Setiap kotak berisi 4 pensil yang sama. Bentuk perpangkatan dari jumlah pensil tersebut adalah …", options: ["4 + 4", "4²", "3 × 4", "4³"], correct: 1, hint: "Perhatikan perkalian berulang dari isi setiap kotak.", explanation: "4 kotak masing-masing 4 pensil → 4 × 4 = 4²" },
+        { q: "Sebuah lampu menyala 2 kali lebih terang setiap jam. Setelah 3 jam, faktor peningkatan terang lampu dapat ditulis sebagai …", options: ["2 + 3", "2 × 3", "2³", "3²"], correct: 2, hint: "“Dua kali setiap jam” menunjukkan perkalian berulang.", explanation: "2 × 2 × 2 = 2³" },
+        { q: "Ada 4 siswa yang berlari di lapangan dan setiap siswa berlari 5 lap. Bentuk yang sesuai adalah …", options: ["5²", "4²", "5 × 4", "4³"], correct: 2, hint: "Hitung total lap terlebih dahulu.", explanation: "4 × 5" },
+        { q: "Paman memiliki 3 jenis ikan, setiap jenis ada 3 ekor. Bentuk yang tepat adalah …", options: ["3 + 3", "9", "3²", "3³"], correct: 2, hint: "Bilangan dikalikan dengan dirinya sendiri.", explanation: "3 × 3 = 3²" },
+        { q: "Pola bilangan 2, 4, 8, 16, … Bilangan ke-5 adalah …", options: ["18", "24", "32", "64"], correct: 2, hint: "Setiap bilangan dikali 2.", explanation: "2, 4, 8, 16, 32" },
+        { q: "Nilai dari 2³ × 2² adalah …", options: ["2⁵", "32", "16", "8"], correct: 1, hint: "Jika basis sama, pangkat dijumlahkan.", explanation: "2³ × 2² = 2⁵ = 32" },
+        { q: "Di kebun terdapat 3 baris tanaman, setiap baris berisi 3 tanaman. Jumlah tanaman adalah …", options: ["6", "9", "12", "27"], correct: 1, hint: "Baris × isi per baris.", explanation: "3 × 3 = 9" },
+        { q: "Sebuah rak berisi 2 buku di setiap tumpuk dan ada 7 tumpuk. Bentuk matematisnya adalah …", options: ["2⁷", "7²", "7 × 2", "7 + 2"], correct: 2, hint: "Total = jumlah tumpuk × isi per tumpuk.", explanation: "7 × 2" },
+        { q: "Dalam lomba estafet digital, jumlah pesan selalu menjadi dua kali lipat setiap tahap. Jika tahap berlangsung 5 kali, model matematika yang tepat adalah …", options: ["5²", "2 + 5", "2⁵", "2 × 5"], correct: 2, hint: "“Dua kali lipat” berulang 5 tahap.", explanation: "2 × 2 × 2 × 2 × 2 = 2⁵" },
+        { q: "Nilai dari 2⁴ adalah …", options: ["6", "8", "16", "32"], correct: 2, hint: "Perkalian berulang 2 sebanyak 4 kali.", explanation: "2⁴ = 2 × 2 × 2 × 2 = 16" }
       ],
       2: [
-        { q: "Sederhanakan: 5⁰ + 3⁰ = ?", options: ["0", "1", "2", "8"], correct: 2, explanation: "5⁰ = 1, 3⁰ = 1, jadi 1 + 1 = 2" },
-        { q: "Nilai dari 2⁻³ adalah?", options: ["1/8", "1/6", "1/3", "1/2"], correct: 0, explanation: "2⁻³ = 1/2³ = 1/8" },
-        { q: "Dalam ilmu kimia, pH 7 berarti konsentrasi ion H⁺ = 10⁻⁷. Nilai ini sama dengan?", options: ["0.0000001", "0.000001", "0.00001", "0.0001"], correct: 0, explanation: "10⁻⁷ = 1/10,000,000 = 0.0000001" },
-        { q: "Hitunglah: (1/2)⁻¹ = ?", options: ["1/4", "1/2", "2", "4"], correct: 3, explanation: "(1/2)⁻¹ = 2¹ = 4" },
-        { q: "Sederhanakan: 10¹ × 10⁻² × 10² = ?", options: ["0", "10", "100", "1000"], correct: 1, explanation: "10¹⁻²⁺² = 10¹ = 10" },
-        { q: "Jika harga barang turun menjadi 1/2 setiap bulan, setelah 3 bulan harganya menjadi berapa kali harga awal?", options: ["1/8", "1/6", "1/3", "1/2"], correct: 0, explanation: "(1/2)³ = 1/8 kali harga awal" },
-        { q: "Massa virus COVID-19 sekitar 10⁻²¹ kg. Ini sama dengan berapa gram?", options: ["10⁻¹⁸", "10⁻²⁰", "10⁻²¹", "10⁻¹⁵"], correct: 0, explanation: "10⁻²¹ kg = 10⁻²¹ × 10³ g = 10⁻¹⁸ g" },
-        { q: "Hitunglah: 3⁻² + 3⁰ = ?", options: ["10/9", "1", "2/3", "1/9"], correct: 0, explanation: "3⁻² + 3⁰ = 1/9 + 1 = 1/9 + 9/9 = 10/9" },
-        { q: "Nilai dari (2⁻¹)⁻³ adalah?", options: ["1/8", "1/2", "2", "8"], correct: 3, explanation: "(2⁻¹)⁻³ = 2³ = 8" },
-        { q: "Jika x⁰ = 1, maka x bisa bernilai? (kecuali)", options: ["5", "100", "0", "-7"], correct: 2, explanation: "Semua bilangan pangkat 0 = 1, kecuali 0⁰ yang tidak terdefinisi" }
+        { q: "Nilai dari 5⁰ adalah …", options: ["0", "1", "5", "10"], correct: 1, hint: "Bilangan (selain 0) pangkat 0 hasilnya 1.", explanation: "5⁰ = 1" },
+        { q: "Jika tidak ada pengulangan perkalian, pangkat yang digunakan adalah …", options: ["satu", "dua", "nol", "negatif"], correct: 2, hint: "Ingat aturan pangkat 0.", explanation: "Tidak ada pengulangan perkalian → pangkat 0" },
+        { q: "Kondisi tidak melakukan pengulangan dapat dimodelkan dengan 8⁰. Nilainya adalah …", options: ["0", "1", "8", "64"], correct: 1, hint: "Pangkat 0 bernilai 1.", explanation: "8⁰ = 1" },
+        { q: "Satu pizza dibagi rata untuk 4 anak. Bagian setiap anak dapat ditulis sebagai …", options: ["4", "4⁻¹", "4²", "4³"], correct: 1, hint: "Pembagian sama rata = kebalikan.", explanation: "1/4 = 4⁻¹" },
+        { q: "Jika sebuah cokelat dibagi rata kepada 2 orang, bagian setiap orang adalah …", options: ["2", "2⁻¹", "2²", "2³"], correct: 1, hint: "Bagi 2 berarti 1/2.", explanation: "1/2 = 2⁻¹" },
+        { q: "Pernyataan perpangkatan negatif yang benar adalah …", options: ["5⁻¹ = 5", "5⁻¹ = 1/5", "5⁻¹ = −5", "5⁻¹ = 0"], correct: 1, hint: "Pangkat negatif = kebalikan.", explanation: "5⁻¹ = 1/5" },
+        { q: "Jika suatu nilai tidak mengalami pertumbuhan, faktor perpangkatannya adalah …", options: ["0", "1", "−1", "bilangan negatif"], correct: 1, hint: "Tidak berubah → dikali 1.", explanation: "Faktor pertumbuhan 1" },
+        { q: "Nilai dari 3⁻² adalah …", options: ["9", "6", "1/9", "3"], correct: 2, hint: "Gunakan kebalikan dari 3².", explanation: "3⁻² = 1/3² = 1/9" },
+        { q: "Seorang siswa membagi 1 liter air ke dalam 8 botol sama besar. Banyak air di setiap botol dinyatakan sebagai …", options: ["8 liter", "1/8 liter", "8⁻¹ liter", "1 liter"], correct: 1, hint: "Satu liter dibagi 8 bagian.", explanation: "1/8 liter" },
+        { q: "Nilai dari 3² × 3⁻² adalah …", options: ["0", "1", "6", "36"], correct: 1, hint: "Jika basis sama, pangkat dijumlahkan.", explanation: "3² × 3⁻² = 3⁰ = 1" }
       ],
       3: [
-        { q: "Panjang diagonal persegi dengan sisi 4 cm mendekati? (√2 ≈ 1.41)", options: ["5.64 cm", "6.64 cm", "7.64 cm", "8.64 cm"], correct: 0, explanation: "diagonal = 4√2 ≈ 4 × 1.41 = 5.64 cm" },
-        { q: "Nilai dari 16^(1/4) adalah?", options: ["2", "4", "8", "16"], correct: 0, explanation: "16^(1/4) = ⁴√16 = 2" },
-        { q: "Sederhanakan: √50 = ?", options: ["5√2", "2√5", "10√2", "25√2"], correct: 0, explanation: "√50 = √(25×2) = 5√2" },
-        { q: "Jika tinggi pohon bertambah mengikuti pola √t meter (t = tahun), berapa tinggi setelah 16 tahun?", options: ["2 m", "4 m", "8 m", "16 m"], correct: 1, explanation: "√16 = 4 meter" },
-        { q: "Nilai dari 27^(2/3) adalah?", options: ["3", "6", "9", "18"], correct: 2, explanation: "27^(2/3) = (³√27)² = 3⁰ = 9" },
-        { q: "Sederhanakan: √12 + √27 = ?", options: ["3√3", "5√3", "6√3", "9√3"], correct: 1, explanation: "√12 + √27 = 2√3 + 3√3 = 5√3" },
-        { q: "Kecepatan suara dalam air ≈ √(K/ρ). Jika K=2.25×10⁹ dan ρ=10³, berapa kecepatan? (dalam 10³ m/s)", options: ["1.5", "2.25", "4.5", "5"], correct: 0, explanation: "v = √(2.25×10⁹/10³) = √(2.25×10⁶) = 1.5×10³ m/s" },
-        { q: "Nilai dari 8^(2/3) adalah?", options: ["2", "4", "8", "16"], correct: 1, explanation: "8^(2/3) = (³√8)² = 2² = 4" },
-        { q: "Jarak terdekat titik (3,4) ke titik asal adalah?", options: ["5", "7", "12", "25"], correct: 0, explanation: "d = √(3²+4²) = √(9+16) = √25 = 5" },
-        { q: "Sederhanakan: ³√64 = ?", options: ["2", "4", "8", "16"], correct: 1, explanation: "³√64 = 4 (karena 4³ = 64)" }
+        { q: "Pak Budi menyusun 25 ubin berbentuk persegi. Banyak ubin di setiap sisi adalah …", options: ["3", "4", "5", "10"], correct: 2, hint: "Cari akar kuadrat dari 25.", explanation: "√25 = 5" },
+        { q: "Banyak baris untuk menyusun 16 buku dengan 4 buku tiap baris adalah …", options: ["2", "3", "4", "8"], correct: 2, hint: "Jumlah baris = total ÷ isi per baris.", explanation: "16 ÷ 4 = 4" },
+        { q: "Bentuk lain dari 16^(1/2) adalah …", options: ["16²", "2⁴", "√16", "4²"], correct: 2, hint: "Pangkat 1/2 sama dengan akar kuadrat.", explanation: "16^(1/2) = √16" },
+        { q: "Nilai dari √36 adalah …", options: ["3", "6", "9", "12"], correct: 1, hint: "Bilangan yang kuadratnya 36.", explanation: "√36 = 6" },
+        { q: "Nilai dari (√9)³ adalah …", options: ["9", "18", "27", "81"], correct: 2, hint: "Hitung akar dulu, lalu pangkat 3.", explanation: "√9 = 3, lalu 3³ = 27" },
+        { q: "Bentuk lain dari 8^(2/3) adalah …", options: ["√8²", "³√8²", "(³√8)²", "8³"], correct: 2, hint: "Pangkat m/n = (akar pangkat n)^m.", explanation: "8^(2/3) = (³√8)²" },
+        { q: "Nilai dari ³√27 adalah …", options: ["2", "3", "6", "9"], correct: 1, hint: "Bilangan yang dipangkatkan 3 menghasilkan 27.", explanation: "³√27 = 3" },
+        { q: "Bentuk lain dari 25^(1/2) adalah …", options: ["25²", "2√5", "√25", "5²"], correct: 2, hint: "Pangkat 1/2 sama dengan akar kuadrat.", explanation: "25^(1/2) = √25" },
+        { q: "Jika x² = 49, maka nilai x adalah …", options: ["5", "7", "6", "14"], correct: 1, hint: "Cari akar kuadrat dari 49.", explanation: "x = 7" },
+        { q: "Nilai dari 12^1 adalah …", options: ["1", "6", "12", "36"], correct: 2, hint: "Pangkat 1 sama dengan bilangan itu sendiri.", explanation: "12^1 = 12" }
       ]
     };
 
@@ -1937,6 +1980,19 @@
         content.classList.add('hidden');
         icon.textContent = '?';
         openPhases = openPhases.filter(p => p !== phaseId);
+      }
+    }
+
+    function toggleGuideItem(itemId) {
+      const content = document.getElementById(`${itemId}-content`);
+      const icon = document.getElementById(`${itemId}-icon`);
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.textContent = '➖';
+      } else {
+        content.classList.add('hidden');
+        icon.textContent = '➕';
       }
     }
 
