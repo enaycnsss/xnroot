@@ -776,71 +776,132 @@
       </section><!-- Guide Section -->
       <section id="guide-section" class="hidden space-y-6">
         <div class="card-glass rounded-2xl p-6 md:p-8">
-          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3"><span class="text-3xl">📖</span> Petunjuk Bermain
+          <h3 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-3xl">📖</span> PETUNJUK PENGGUNAAN APLIKASI PEMBELAJARAN XnRoot
           </h3>
-          <div class="space-y-4">
-            <div class="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl p-4 border border-blue-500/30">
-              <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><span>1️⃣</span> Daftar</h4>
-              <p class="text-gray-300">Masukkan nama kamu dan klik "Mulai Petualangan!" untuk memulai.</p>
-            </div>
-            <div class="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-4 border border-purple-500/30">
-              <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><span>2️⃣</span> Pelajari Materi</h4>
-              <p class="text-gray-300">Tonton video dan baca materi pembelajaran untuk memahami konsep perpangkatan dan
-                bentuk akar.</p>
-            </div>
-            <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-4 border border-green-500/30">
-              <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><span>3️⃣</span> Mainkan Level</h4>
-              <p class="text-gray-300">Selesaikan setiap level dengan menjawab 10 soal. Setiap jawaban benar mendapat
-                100 poin. Kecepatan juga dihitung!</p>
-            </div>
-            <div
-              class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl p-4 border border-yellow-500/30">
-              <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><span>4️⃣</span> Kumpulkan Badges</h4>
-              <p class="text-gray-300">Dapatkan 17 badges berbeda dengan menyelesaikan berbagai aktivitas dan tantangan!
+          <div class="space-y-5">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-blue-500/20 rounded-xl p-5 border border-indigo-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-indigo-200 mb-2">A. Tentang Aplikasi</h4>
+              <p class="text-sm md:text-base text-gray-300">
+                XnRoot adalah aplikasi pembelajaran matematika berbasis web dengan pendekatan inkuiri yang berfokus pada
+                materi perpangkatan dan bentuk akar. Aplikasi ini memadukan materi interaktif, video pembelajaran,
+                eksplorasi konsep, serta latihan soal berbasis permainan (gamifikasi) untuk membantu siswa memahami
+                konsep secara mendalam.
               </p>
             </div>
-          </div>
-          <div class="mt-8 space-y-6">
-            <h4 class="text-xl md:text-2xl font-bold text-indigo-300 flex items-center gap-2"><span>🧭</span> Petunjuk
-              Fitur</h4>
-            <div
-              class="phase-card bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl p-6 border border-cyan-500/30 cursor-pointer"
-              onclick="toggleGuideItem('guide-exploration')">
-              <div class="flex items-center justify-between mb-3">
-                <h5 class="text-lg md:text-xl font-bold text-cyan-300">FITUR EKSPLORASI INTERAKTIF</h5>
-                <span id="guide-exploration-icon" class="text-2xl">➕</span>
-              </div>
-              <p class="text-sm md:text-base text-gray-300">Digunakan untuk memahami konsep perpangkatan dan akar
-                melalui
-                percobaan langsung.</p>
-              <div id="guide-exploration-content" class="hidden mt-4 bg-black/20 rounded-lg p-5">
-                <p class="text-sm md:text-base text-white font-semibold mb-3">Langkah:</p>
-                <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
-                  <li>Pilih menu Eksplorasi Interaktif</li>
-                  <li>Pilih materi</li>
-                  <li>Masukkan angka</li>
-                  <li>Amati hasil</li>
-                </ol>
-              </div>
+
+            <div class="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl p-5 border border-cyan-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-cyan-200 mb-2">B. Persiapan Sebelum Menggunakan Aplikasi</h4>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Pastikan perangkat (laptop/komputer/HP) terhubung dengan jaringan internet.</li>
+                <li>Gunakan browser yang direkomendasikan seperti Google Chrome atau Mozilla Firefox.</li>
+                <li>Disarankan menggunakan layar berukuran sedang hingga besar agar tampilan aplikasi lebih optimal.</li>
+              </ol>
             </div>
-            <div
-              class="phase-card bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30 cursor-pointer"
-              onclick="toggleGuideItem('guide-game')">
-              <div class="flex items-center justify-between mb-3">
-                <h5 class="text-lg md:text-xl font-bold text-purple-300">FITUR GAME LEVEL</h5>
-                <span id="guide-game-icon" class="text-2xl">➕</span>
-              </div>
-              <p class="text-sm md:text-base text-gray-300">Digunakan untuk menguji pemahaman materi.</p>
-              <div id="guide-game-content" class="hidden mt-4 bg-black/20 rounded-lg p-5">
-                <p class="text-sm md:text-base text-white font-semibold mb-3">Langkah:</p>
-                <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
-                  <li>Log in dengan memasukkan username kalian</li>
-                  <li>Pilih Game Level</li>
-                  <li>Pilih level</li>
-                  <li>Jawab soal</li>
-                  <li>Lihat skor</li>
-                </ol>
-              </div>
+
+            <div class="bg-gradient-to-r from-blue-500/20 to-sky-500/20 rounded-xl p-5 border border-blue-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-blue-200 mb-2">C. Halaman Awal Aplikasi</h4>
+              <p class="text-sm md:text-base text-gray-300">
+                Pada halaman awal aplikasi, pengguna akan melihat judul aplikasi XnRoot dan menu navigasi di bagian atas
+                layar. Untuk mulai menggunakan aplikasi, klik tombol "Lanjutkan!" yang tersedia di halaman awal.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-5 border border-purple-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-purple-200 mb-2">D. Menu Utama Aplikasi</h4>
+              <p class="text-sm md:text-base text-gray-300 mb-2">
+                Menu utama aplikasi terletak pada bagian atas halaman dan terdiri dari:
+              </p>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Beranda: Menampilkan halaman utama dan ringkasan fitur aplikasi.</li>
+                <li>CP/TP: Menampilkan Capaian Pembelajaran dan Tujuan Pembelajaran.</li>
+                <li>Inkuiri: Berisi materi pembelajaran berbasis inkuiri.</li>
+                <li>Petunjuk: Menampilkan panduan singkat penggunaan aplikasi.</li>
+                <li>Peringkat: Menampilkan papan peringkat skor pengguna.</li>
+                <li>Developer: Menampilkan informasi pengembang aplikasi.</li>
+              </ol>
+            </div>
+
+            <div class="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-xl p-5 border border-emerald-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-emerald-200 mb-2">E. Materi Pembelajaran</h4>
+              <p class="text-sm md:text-base text-gray-300 mb-2">
+                Materi pembelajaran dalam aplikasi XnRoot terdiri dari:
+              </p>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Perpangkatan Dasar.</li>
+                <li>Pangkat Nol dan Pangkat Negatif.</li>
+                <li>Pangkat Pecahan dan Bentuk Akar.</li>
+              </ol>
+              <p class="text-sm md:text-base text-gray-300 mt-2">
+                Pengguna dapat mempelajari materi secara berurutan dengan menekan tombol setiap materi untuk berpindah
+                ke materi berikutnya.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl p-5 border border-yellow-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-yellow-200 mb-2">F. Video Pembelajaran</h4>
+              <p class="text-sm md:text-base text-gray-300 mb-2">Pada setiap bagian materi tersedia video pembelajaran.</p>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Klik ikon video untuk memulai pemutaran.</li>
+                <li>Gunakan tombol play atau pause sesuai kebutuhan.</li>
+                <li>Setelah selesai menonton, pengguna dapat kembali ke materi atau melanjutkan ke tahap berikutnya.</li>
+              </ol>
+            </div>
+
+            <div class="bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-xl p-5 border border-teal-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-teal-200 mb-2">G. Eksplorasi Interaktif</h4>
+              <p class="text-sm md:text-base text-gray-300">
+                Fitur eksplorasi interaktif memungkinkan pengguna mencoba langsung konsep perpangkatan dan bentuk akar
+                dengan memasukkan nilai tertentu dan melihat hasilnya secara langsung.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-orange-500/20 to-amber-500/20 rounded-xl p-5 border border-orange-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-orange-200 mb-2">H. Quest Arena (Tantangan Matematika)</h4>
+              <p class="text-sm md:text-base text-gray-300 mb-2">Quest Arena merupakan fitur latihan soal berbasis permainan.</p>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Terdapat tiga level tantangan.</li>
+                <li>Setiap level berisi 5 soal dengan batas waktu tertentu.</li>
+                <li>Pilih jawaban yang dianggap benar untuk mendapatkan skor.</li>
+                <li>Skor akan ditampilkan setelah seluruh soal selesai dikerjakan.</li>
+              </ol>
+            </div>
+
+            <div class="bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-xl p-5 border border-pink-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-pink-200 mb-2">I. Skor, Badge, dan Peringkat</h4>
+              <p class="text-sm md:text-base text-gray-300 mb-2">Aplikasi XnRoot menerapkan sistem gamifikasi.</p>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Setiap jawaban benar akan menambah skor.</li>
+                <li>Pengguna akan memperoleh badge berdasarkan aktivitas dan pencapaian tertentu.</li>
+                <li>Skor dan badge akan memengaruhi posisi pengguna pada menu Peringkat.</li>
+              </ol>
+            </div>
+
+            <div class="bg-gradient-to-r from-sky-500/20 to-indigo-500/20 rounded-xl p-5 border border-sky-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-sky-200 mb-2">J. Navigasi dan Tombol Penting</h4>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Menu Beranda: Digunakan untuk kembali ke halaman utama aplikasi.</li>
+                <li>Tombol Lanjutkan/Lanjut: Digunakan untuk berpindah ke halaman berikutnya.</li>
+                <li>Tombol Kembali: Digunakan untuk kembali ke halaman sebelumnya.</li>
+                <li>Tombol Mulai: Digunakan untuk memulai tantangan pada Quest Arena.</li>
+              </ol>
+            </div>
+
+            <div class="bg-gradient-to-r from-slate-500/20 to-zinc-500/20 rounded-xl p-5 border border-slate-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-slate-200 mb-2">K. Mengakhiri Penggunaan Aplikasi</h4>
+              <p class="text-sm md:text-base text-gray-300">
+                Setelah selesai menggunakan aplikasi, pengguna dapat langsung menutup tab atau jendela browser.
+                Aplikasi tidak memerlukan proses logout.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-lime-500/20 to-emerald-500/20 rounded-xl p-5 border border-lime-500/30">
+              <h4 class="text-lg md:text-xl font-bold text-lime-200 mb-2">L. Tips Penggunaan</h4>
+              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Pelajari materi secara berurutan sebelum mengerjakan tantangan.</li>
+                <li>Manfaatkan video pembelajaran untuk memperdalam pemahaman.</li>
+                <li>Ulangi latihan soal untuk meningkatkan skor dan memperoleh badge.</li>
+              </ol>
             </div>
           </div>
         </div>
