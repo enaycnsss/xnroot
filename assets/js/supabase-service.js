@@ -262,6 +262,7 @@
           level_1_score: record.level_1_score || 0,
           level_2_score: record.level_2_score || 0,
           level_3_score: record.level_3_score || 0,
+          level_4_score: record.level_4_score || 0,
           // Game statistics - support both singular and plural
           game_played: record.game_played !== undefined ? record.game_played : (record.games_played !== undefined ? record.games_played : (record.gamesPlayed || 0)),
           correct_answers: record.correct_answers !== undefined ? record.correct_answers : (record.correct_answer !== undefined ? record.correct_answer : (record.correctAnswers || 0)),
@@ -340,6 +341,7 @@
           level_1_score: item.level_1_score,
           level_2_score: item.level_2_score,
           level_3_score: item.level_3_score,
+          level_4_score: item.level_4_score,
           // Game statistics - support both singular and plural
           game_played: item.game_played || item.games_played,
           games_played: item.games_played || item.game_played,
@@ -403,6 +405,7 @@
           level_1_score: record.level_1_score,
           level_2_score: record.level_2_score,
           level_3_score: record.level_3_score,
+          level_4_score: record.level_4_score,
           // Game statistics - support both singular and plural
           game_played: record.game_played !== undefined ? record.game_played : (record.games_played !== undefined ? record.games_played : record.gamesPlayed),
           correct_answers: record.correct_answers !== undefined ? record.correct_answers : (record.correct_answer !== undefined ? record.correct_answer : record.correctAnswers),
