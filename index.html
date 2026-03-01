@@ -149,6 +149,76 @@
       box-shadow: 0 8px 20px rgba(79, 70, 229, 0.28);
     }
 
+    @media (max-width: 639px) {
+      nav {
+        overflow: visible;
+      }
+
+      .nav-scroll {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: visible;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      .nav-btn {
+        position: relative;
+      }
+
+      .nav-btn::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: calc(100% + 4px);
+        transform: translate(-50%, -4px);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #ffffff;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.18s ease, transform 0.18s ease;
+        z-index: 30;
+      }
+
+      .nav-btn::after {
+        content: attr(data-label);
+        position: absolute;
+        left: 50%;
+        top: calc(100% + 10px);
+        transform: translate(-50%, -4px) scale(0.96);
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        border-radius: 9999px;
+        color: #0f172a;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 4px 8px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.18s ease, transform 0.18s ease;
+        z-index: 30;
+      }
+
+      .nav-btn:hover::before,
+      .nav-btn:focus::before,
+      .nav-btn:focus-visible::before,
+      .nav-btn:active::before,
+      .nav-btn-active::before,
+      .nav-btn:hover::after,
+      .nav-btn:focus::after,
+      .nav-btn:focus-visible::after,
+      .nav-btn:active::after,
+      .nav-btn-active::after {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+      }
+    }
+
     .frac {
       display: inline-flex;
       flex-direction: column;
@@ -212,23 +282,23 @@
             class="text-2xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             XnRoot</h1>
         </div>
-        <div class="flex items-center gap-1 md:gap-2 overflow-x-auto"><button onclick="showSection('home')"
-            data-nav="home"
+        <div class="nav-scroll flex items-center gap-1 md:gap-2 overflow-x-auto"><button onclick="showSection('home')"
+            data-nav="home" data-label="Beranda"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">🏠</span> <span class="hidden sm:inline">Beranda</span> </button> <button
-            onclick="showSection('cptp')" data-nav="cptp"
+            onclick="showSection('cptp')" data-nav="cptp" data-label="CP/TP"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">📚</span> <span class="hidden sm:inline">CP/TP</span> </button> <button
-            onclick="showSection('inquiry')" data-nav="inquiry"
+            onclick="showSection('inquiry')" data-nav="inquiry" data-label="Inkuiri"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">🔬</span> <span class="hidden sm:inline">Inkuiri</span> </button> <button
-            onclick="showSection('material')" data-nav="material"
+            onclick="showSection('material')" data-nav="material" data-label="Materi"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">📝</span> <span class="hidden sm:inline">Materi</span> </button> <button
-            onclick="showSection('leaderboard')" data-nav="leaderboard"
+            onclick="showSection('leaderboard')" data-nav="leaderboard" data-label="Peringkat"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">🏆</span> <span class="hidden sm:inline">Peringkat</span> </button>
-          <button onclick="showSection('developer')" data-nav="developer"
+          <button onclick="showSection('developer')" data-nav="developer" data-label="Developer"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">👨‍💻</span> <span class="hidden sm:inline">Developer</span> </button>
           <div id="user-score"
