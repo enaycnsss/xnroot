@@ -203,16 +203,8 @@
         z-index: 60;
       }
 
-      .nav-btn:hover::before,
-      .nav-btn:focus::before,
-      .nav-btn:focus-visible::before,
-      .nav-btn:active::before,
-      .nav-btn-active::before,
-      .nav-btn:hover::after,
-      .nav-btn:focus::after,
-      .nav-btn:focus-visible::after,
-      .nav-btn:active::after,
-      .nav-btn-active::after {
+      .nav-btn.tooltip-visible::before,
+      .nav-btn.tooltip-visible::after {
         opacity: 1;
         transform: translate(-50%, 0) scale(1);
       }
@@ -1759,6 +1751,7 @@
     let levelStartTime = null;
     let currentQuestions = [];
     let openPhases = [];
+    let navTooltipTimer = null;
 
     // ==================== Badge Functions ====================
     function hasBadge(badgeName) {
@@ -2676,12 +2669,32 @@
       }
     }
 
+    function showNavTooltipTemporarily(sectionName) {
+      const targetButton = document.querySelector(`.nav-btn[data-nav="${sectionName}"]`);
+      if (!targetButton) return;
+
+      document.querySelectorAll('.nav-btn').forEach(button => {
+        button.classList.remove('tooltip-visible');
+      });
+
+      targetButton.classList.add('tooltip-visible');
+
+      if (navTooltipTimer) {
+        clearTimeout(navTooltipTimer);
+      }
+
+      navTooltipTimer = setTimeout(() => {
+        targetButton.classList.remove('tooltip-visible');
+      }, 5000);
+    }
+
     function showSection(sectionName) {
       document.querySelectorAll('section').forEach(section => {
         section.classList.add('hidden');
       });
       document.getElementById(`${sectionName}-section`).classList.remove('hidden');
       setActiveNav(sectionName);
+      showNavTooltipTemporarily(sectionName);
       if (sectionName === 'home') {
         document.getElementById('guide-section').classList.remove('hidden');
       }
