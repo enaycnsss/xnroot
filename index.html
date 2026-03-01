@@ -139,6 +139,16 @@
       transform: translateY(-5px);
     }
 
+    .nav-btn {
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn-active {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.35), rgba(168, 85, 247, 0.35));
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.28);
+    }
+
     .frac {
       display: inline-flex;
       flex-direction: column;
@@ -203,21 +213,22 @@
             XnRoot</h1>
         </div>
         <div class="flex items-center gap-1 md:gap-2 overflow-x-auto"><button onclick="showSection('home')"
+            data-nav="home"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">🏠</span> <span class="hidden sm:inline">Beranda</span> </button> <button
-            onclick="showSection('cptp')"
+            onclick="showSection('cptp')" data-nav="cptp"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">📚</span> <span class="hidden sm:inline">CP/TP</span> </button> <button
-            onclick="showSection('inquiry')"
+            onclick="showSection('inquiry')" data-nav="inquiry"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">🔬</span> <span class="hidden sm:inline">Inkuiri</span> </button> <button
-            onclick="showSection('guide')"
+            onclick="showSection('material')" data-nav="material"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
-            <span class="text-xl md:text-2xl">📖</span> <span class="hidden sm:inline">Petunjuk</span> </button> <button
-            onclick="showSection('leaderboard')"
+            <span class="text-xl md:text-2xl">📝</span> <span class="hidden sm:inline">Materi</span> </button> <button
+            onclick="showSection('leaderboard')" data-nav="leaderboard"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">🏆</span> <span class="hidden sm:inline">Peringkat</span> </button>
-          <button onclick="showSection('developer')"
+          <button onclick="showSection('developer')" data-nav="developer"
             class="nav-btn px-2 md:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-sm md:text-base whitespace-nowrap">
             <span class="text-xl md:text-2xl">👨‍💻</span> <span class="hidden sm:inline">Developer</span> </button>
           <div id="user-score"
@@ -238,9 +249,10 @@
             Selamat Datang di XnRoot!</h2>
           <p id="welcome-desc" class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Petualangan
             matematika interaktif dengan pendekatan inkuiri. Pelajari perpangkatan dan bentuk akar sambil bermain!. Agar
-            pengalaman belajarmu lebih maksimal, silakan baca terlebih dahulu Petunjuk Bermain pada menu Petunjuk 📖
-            sebelum memulai</p>
-        </div><!-- Learning Materials -->
+            pengalaman belajarmu lebih maksimal.</p>
+        </div>
+      </section><!-- Material Section -->
+      <section id="material-section" class="hidden space-y-8"><!-- Learning Materials -->
         <div class="card-glass rounded-2xl p-6 md:p-8">
           <h3 class="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-3"><span
               class="text-4xl md:text-5xl">📝</span> Materi Pembelajaran</h3><!-- Material Tabs -->
@@ -792,7 +804,7 @@
           </div>
         </div>
       </section><!-- Guide Section -->
-      <section id="guide-section" class="hidden space-y-6">
+      <section id="guide-section" class="space-y-6 mt-6">
         <div class="card-glass rounded-2xl p-6 md:p-8">
           <h3 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
             <span class="text-3xl">📖</span> PETUNJUK PENGGUNAAN APLIKASI PEMBELAJARAN XnRoot
@@ -813,7 +825,8 @@
               <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
                 <li>Pastikan perangkat (laptop/komputer/HP) terhubung dengan jaringan internet.</li>
                 <li>Gunakan browser yang direkomendasikan seperti Google Chrome atau Mozilla Firefox.</li>
-                <li>Disarankan menggunakan layar berukuran sedang hingga besar agar tampilan aplikasi lebih optimal.</li>
+                <li>Disarankan menggunakan layar berukuran sedang hingga besar agar tampilan aplikasi lebih optimal.
+                </li>
               </ol>
             </div>
 
@@ -831,16 +844,17 @@
                 Menu utama aplikasi terletak pada bagian atas halaman dan terdiri dari:
               </p>
               <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
-                <li>Beranda: Menampilkan halaman utama dan ringkasan fitur aplikasi.</li>
+                <li>Beranda: Menampilkan halaman utama dan petunjuk penggunaan aplikasi.</li>
+                <li>Materi: Menampilkan materi pembelajaran interaktif dan Quest Arena.</li>
                 <li>CP/TP: Menampilkan Capaian Pembelajaran dan Tujuan Pembelajaran.</li>
                 <li>Inkuiri: Berisi materi pembelajaran berbasis inkuiri.</li>
-                <li>Petunjuk: Menampilkan panduan singkat penggunaan aplikasi.</li>
                 <li>Peringkat: Menampilkan papan peringkat skor pengguna.</li>
                 <li>Developer: Menampilkan informasi pengembang aplikasi.</li>
               </ol>
             </div>
 
-            <div class="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-xl p-5 border border-emerald-500/30">
+            <div
+              class="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-xl p-5 border border-emerald-500/30">
               <h4 class="text-lg md:text-xl font-bold text-emerald-200 mb-2">E. Materi Pembelajaran</h4>
               <p class="text-sm md:text-base text-gray-300 mb-2">
                 Materi pembelajaran dalam aplikasi XnRoot terdiri dari:
@@ -856,13 +870,16 @@
               </p>
             </div>
 
-            <div class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl p-5 border border-yellow-500/30">
+            <div
+              class="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl p-5 border border-yellow-500/30">
               <h4 class="text-lg md:text-xl font-bold text-yellow-200 mb-2">F. Video Pembelajaran</h4>
-              <p class="text-sm md:text-base text-gray-300 mb-2">Pada setiap bagian materi tersedia video pembelajaran.</p>
+              <p class="text-sm md:text-base text-gray-300 mb-2">Pada setiap bagian materi tersedia video pembelajaran.
+              </p>
               <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
                 <li>Klik ikon video untuk memulai pemutaran.</li>
                 <li>Gunakan tombol play atau pause sesuai kebutuhan.</li>
-                <li>Setelah selesai menonton, pengguna dapat kembali ke materi atau melanjutkan ke tahap berikutnya.</li>
+                <li>Setelah selesai menonton, pengguna dapat kembali ke materi atau melanjutkan ke tahap berikutnya.
+                </li>
               </ol>
             </div>
 
@@ -876,7 +893,8 @@
 
             <div class="bg-gradient-to-r from-orange-500/20 to-amber-500/20 rounded-xl p-5 border border-orange-500/30">
               <h4 class="text-lg md:text-xl font-bold text-orange-200 mb-2">H. Quest Arena (Tantangan Matematika)</h4>
-              <p class="text-sm md:text-base text-gray-300 mb-2">Quest Arena merupakan fitur latihan soal berbasis permainan.</p>
+              <p class="text-sm md:text-base text-gray-300 mb-2">Quest Arena merupakan fitur latihan soal berbasis
+                permainan.</p>
               <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-gray-300">
                 <li>Terdapat tiga level tantangan.</li>
                 <li>Setiap level berisi 5 soal dengan batas waktu tertentu.</li>
@@ -1092,7 +1110,8 @@
           </div><!-- Progress -->
           <div class="mb-6">
             <div class="flex items-center justify-between mb-2">
-              <p class="text-sm text-gray-400">Soal <span id="current-question-num">1</span> dari <span id="total-questions">5</span></p>
+              <p class="text-sm text-gray-400">Soal <span id="current-question-num">1</span> dari <span
+                  id="total-questions">5</span></p>
               <p class="text-sm text-gray-400">Benar: <span id="correct-count" class="text-green-400 font-bold">0</span>
                 | Salah: <span id="wrong-count" class="text-red-400 font-bold">0</span></p>
             </div>
@@ -1156,7 +1175,7 @@
     const defaultConfig = {
       app_title: 'XnRoot',
       welcome_title: 'Selamat Datang di XnRoot!',
-      welcome_description: 'Petualangan matematika interaktif dengan pendekatan inkuiri. Pelajari perpangkatan dan bentuk akar sambil bermain!. Agar pengalaman belajarmu lebih maksimal, silakan baca terlebih dahulu Petunjuk Bermain pada menu Petunjuk 📖 sebelum memulai'
+      welcome_description: 'Petualangan matematika interaktif dengan pendekatan inkuiri. Pelajari perpangkatan dan bentuk akar sambil bermain!. Agar pengalaman belajarmu lebih maksimal.'
     };
 
     // ==================== UI Sounds ====================
@@ -2577,11 +2596,26 @@
     }
 
     // ==================== Section Navigation ====================
+    function setActiveNav(sectionName) {
+      document.querySelectorAll('.nav-btn').forEach(button => {
+        button.classList.remove('nav-btn-active');
+      });
+
+      const activeButton = document.querySelector(`.nav-btn[data-nav="${sectionName}"]`);
+      if (activeButton) {
+        activeButton.classList.add('nav-btn-active');
+      }
+    }
+
     function showSection(sectionName) {
       document.querySelectorAll('section').forEach(section => {
         section.classList.add('hidden');
       });
       document.getElementById(`${sectionName}-section`).classList.remove('hidden');
+      setActiveNav(sectionName);
+      if (sectionName === 'home') {
+        document.getElementById('guide-section').classList.remove('hidden');
+      }
 
       if (sectionName !== 'game') {
         stopQuestionBgm();
@@ -2702,6 +2736,7 @@
 
         // Initialize material display
         showMaterial('dasar');
+        setActiveNav('home');
         renderBadges();
 
         // Update storage stats
