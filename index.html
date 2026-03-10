@@ -321,7 +321,7 @@
               class="material-tab bg-purple-500 px-6 py-3 rounded-full text-base md:text-lg font-medium transition-all"
               data-tab="dasar"> Perpangkatan Dasar </button> <button onclick="showMaterial('nol')"
               class="material-tab bg-white/10 px-6 py-3 rounded-full text-base md:text-lg font-medium transition-all hover:bg-white/20"
-              data-tab="nol"> Pangkat Nol &amp; Negatif </button> <button onclick="showMaterial('pecahan')"
+              data-tab="nol"> Sifat-Sifat Bilangan Berpangkat </button> <button onclick="showMaterial('pecahan')"
               class="material-tab bg-white/10 px-6 py-3 rounded-full text-base md:text-lg font-medium transition-all hover:bg-white/20"
               data-tab="pecahan"> Pangkat Pecahan &amp; Akar </button>
           </div><!-- Video Section -->
@@ -1379,20 +1379,21 @@
         <h4 class="text-2xl md:text-3xl font-bold mb-6 text-green-300">📚 Perpangkatan Dasar</h4>
         <div class="space-y-5 text-gray-300">
           
-          <!-- Fase 1: Orientasi Masalah -->
+          <!-- Fase 1: Orientasi dan Merumuskan Masalah -->
           <div class="bg-blue-500/10 p-5 rounded-lg border border-blue-500/30">
             <p class="font-bold text-lg text-cyan-300 mb-3 flex items-center gap-2">
               <span>1️⃣</span> Orientasi dan Merumuskan Masalah
             </p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">📱 Kasus: Viral di Media Sosial</p>
-              <p class="text-base md:text-lg mb-2">Kamu membuat video lucu dan membagikannya ke 3 teman. Setiap temanmu juga membagikannya ke 3 teman mereka masing-masing.</p>
-              <p class="text-base md:text-lg mb-2">• Putaran 1: 3 orang menonton</p>
-              <p class="text-base md:text-lg mb-2">• Putaran 2: 3 × 3 = 9 orang menonton</p>
-              <p class="text-base md:text-lg">• Putaran 3: 9 × 3 = 27 orang menonton</p>
+              <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">🥤 Kasus: Tantangan Bisnis “Jus Sehat Kekinian”</p>
+              <p class="text-base md:text-lg mb-2">Bayangkan kamu baru saja membuka kedai jus. Untuk mempromosikannya, kamu tidak memakai iklan TV, melainkan sistem “Member Get Member”.</p>
+              <p class="text-base md:text-lg mb-2"><strong>Skenario:</strong> Kamu memberikan voucher promo kepada 2 teman dekatmu (1 putaran).</p>
+              <p class="text-base md:text-lg mb-2"><strong>Syarat:</strong> Setiap orang yang menerima voucher wajib membagikan voucher baru kepada 2 orang lainnya.</p>
+              <p class="text-base md:text-lg mb-1">• Putaran 1: 2 orang baru</p>
+              <p class="text-base md:text-lg mb-1">• Putaran 2: 2 × 2 = 4 orang baru</p>
+              <p class="text-base md:text-lg">• Putaran 3: 4 × 2 = 8 orang baru</p>
             </div>
-            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Berapa orang yang menonton setelah 5 putaran? Bagaimana cara menghitungnya dengan efisien?</p>
-            <p class="text-sm md:text-base text-gray-400 mt-2 italic">💭 Pikirkan: Apakah ada pola matematika di sini?</p>
+            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Jika tren ini terus berlanjut, berapa orang baru pada putaran ke-10? Apakah kamu sanggup menyiapkan stok buahnya?</p>
           </div>
           
           <!-- Fase 2: Merumuskan Hipotesis -->
@@ -1400,17 +1401,17 @@
             <p class="font-bold text-lg text-green-300 mb-3 flex items-center gap-2">
               <span>2️⃣</span> Merumuskan Hipotesis
             </p>
-            <p class="text-base md:text-lg mb-3">🔍 Mari amati pola penyebarannya:</p>
+            <p class="text-base md:text-lg mb-3">🔍 Mari kita bedah polanya agar bisa memprediksi tanpa menghitung satu per satu:</p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <ul class="space-y-2 text-base md:text-lg">
-                <li>• Putaran 1: 3 = 3¹</li>
-                <li>• Putaran 2: 3 × 3 = 3²</li>
-                <li>• Putaran 3: 3 × 3 × 3 = 3³</li>
-                <li>• Putaran 4: 3 × 3 × 3 × 3 = 3⁴</li>
+                <li>• Putaran 1: 2 = 2¹</li>
+                <li>• Putaran 2: 2 × 2 = 2²</li>
+                <li>• Putaran 3: 2 × 2 × 2 = 2³</li>
+                <li>• Putaran 4: 2 × 2 × 2 × 2 = 2⁴</li>
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-green-300 mb-2">💡 Hipotesis:</p>
-            <p class="text-base md:text-lg">"Jumlah penonton pada putaran ke-n adalah 3<sup>n</sup>, artinya 3 dikalikan dengan dirinya sendiri sebanyak n kali. Ini disebut <strong>perpangkatan</strong>!"</p>
+            <p class="text-base md:text-lg">"Jumlah orang pada putaran ke-n adalah 2<sup>n</sup>, artinya 2 dikalikan dengan dirinya sendiri sebanyak n kali."</p>
           </div>
           
           <!-- Fase 3: Mengumpulkan Data -->
@@ -1418,16 +1419,13 @@
             <p class="font-bold text-lg text-yellow-300 mb-3 flex items-center gap-2">
               <span>3️⃣</span> Mengumpulkan Data
             </p>
-            <p class="text-base md:text-lg mb-3">🔬 <strong>Eksperimen:</strong> Gunakan kalkulator eksplorasi di bawah untuk menguji hipotesis!</p>
+            <p class="text-base md:text-lg mb-3">🔬 <strong>Uji skenario berikut:</strong> Gunakan kalkulator eksploratif.</p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg mb-2"><strong>Coba hitung:</strong></p>
               <ul class="list-disc list-inside space-y-1 ml-4 text-base md:text-lg">
-                <li>3⁵ (untuk 5 putaran) = ?</li>
-                <li>2⁴ (jika membagikan ke 2 orang, 4 putaran) = ?</li>
-                <li>5³ (jika membagikan ke 5 orang, 3 putaran) = ?</li>
+                <li><strong>Skenario A:</strong> Jika satu orang wajib mengajak 3 orang, berapa orang pada putaran ke-4?</li>
+                <li><strong>Skenario B:</strong> Di grup kelas berisi 5 orang, masing-masing mengirim pesan ke 5 grup lainnya. Putaran ke-3 ada berapa pesan?</li>
               </ul>
             </div>
-            <p class="text-base md:text-lg italic text-gray-400">💡 Tip: Bandingkan hasil eksperimen dengan hipotesismu!</p>
           </div>
           
           <!-- Fase 4: Menguji Hipotesis -->
@@ -1435,19 +1433,16 @@
             <p class="font-bold text-lg text-purple-300 mb-3 flex items-center gap-2">
               <span>4️⃣</span> Menguji Hipotesis
             </p>
-            <p class="text-base md:text-lg mb-3">✓ <strong>Hasil Pengujian:</strong></p>
+            <p class="text-base md:text-lg mb-3">Buktikan apakah rumus a<sup>n</sup> selalu berhasil.</p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg mb-2">Untuk video viral (basis 3):</p>
-              <ul class="space-y-2 ml-4 text-base md:text-lg">
-                <li>✓ 3⁵ = 243 penonton ✓</li>
-                <li>✓ 3⁶ = 729 penonton ✓</li>
-                <li>✓ 3⁷ = 2,187 penonton ✓</li>
-              </ul>
+              <p class="text-base md:text-lg mb-2">Untuk putaran ke-6 pada kasus kedai jus:</p>
+              <p class="text-base md:text-lg mb-1">• Cara manual: 2 × 2 × 2 × 2 × 2 × 2 = ...</p>
+              <p class="text-base md:text-lg">• Cara perpangkatan: 2<sup>6</sup> = ...</p>
             </div>
-            <p class="text-base md:text-lg font-semibold text-purple-300">✅ Hipotesis terbukti benar! Pola perpangkatan berlaku untuk pertumbuhan viral!</p>
+            <p class="text-base md:text-lg font-semibold text-purple-300">Jika hasilnya sama, hipotesis terbukti benar.</p>
           </div>
           
-          <!-- Fase 5: Kesimpulan -->
+          <!-- Fase 5: Merumuskan Kesimpulan -->
           <div class="bg-red-500/10 p-5 rounded-lg border border-red-500/30">
             <p class="font-bold text-lg text-red-300 mb-3 flex items-center gap-2">
               <span>5️⃣</span> Merumuskan Kesimpulan
@@ -1455,41 +1450,37 @@
             <div class="bg-black/30 p-4 rounded-lg mb-4">
               <p class="font-bold mb-2 text-lg">📖 Definisi Perpangkatan:</p>
               <p class="text-lg md:text-xl mb-2">a<sup>n</sup> = a × a × a × ... × a (sebanyak n kali)</p>
-              <p class="text-base md:text-lg text-gray-300">• a = <strong>basis</strong> (bilangan yang dikalikan berulang)</p>
-              <p class="text-base md:text-lg text-gray-300">• n = <strong>pangkat/eksponen</strong> (banyaknya perkalian)</p>
+              <p class="text-base md:text-lg text-gray-300">• a = <strong>basis/bilangan pokok</strong></p>
+              <p class="text-base md:text-lg text-gray-300">• n = <strong>eksponen/pangkat</strong></p>
             </div>
             <div class="bg-black/30 p-4 rounded-lg">
-              <p class="text-base md:text-lg font-bold mb-3">🌟 Aplikasi Nyata Perpangkatan:</p>
+              <p class="text-base md:text-lg font-bold mb-3">🌟 Aplikasi Nyata:</p>
               <ul class="space-y-3 text-base md:text-lg">
-                <li><strong>📱 Media Sosial:</strong> Konten viral menyebar secara eksponensial (3<sup>n</sup>, 2<sup>n</sup>)</li>
-                <li><strong>💰 Investasi:</strong> Bunga majemuk di bank: Modal × (1.05)<sup>tahun</sup></li>
-                <li><strong>💾 Kapasitas Data:</strong> 2GB, 4GB, 8GB, 16GB = 2¹, 2², 2³, 2⁴</li>
-                <li><strong>🦠 Pertumbuhan Bakteri:</strong> Pembelahan sel: 2<sup>n</sup> sel</li>
-                <li><strong>📈 Pertumbuhan Ekonomi:</strong> Populasi, GDP meningkat eksponensial</li>
-                <li><strong>🎮 Skor Game:</strong> Combo multiplier: skor × 2<sup>combo</sup></li>
+                <li><strong>🧬 Mitigasi Bencana:</strong> Cara satu sel virus membelah diri mengikuti pola 2<sup>n</sup>.</li>
+                <li><strong>💾 Teknologi:</strong> Kapasitas memori meningkat 64GB, 128GB, 256GB (pola 2<sup>n</sup>).</li>
+                <li><strong>💰 Keuangan:</strong> Bunga majemuk membuat tabungan tumbuh berlipat ganda seiring waktu.</li>
               </ul>
             </div>
           </div>
         </div>
       `,
       nol: `
-        <h4 class="text-2xl md:text-3xl font-bold mb-6 text-yellow-300">? Pangkat Nol dan Negatif</h4>
+        <h4 class="text-2xl md:text-3xl font-bold mb-6 text-yellow-300">📘 Sifat-Sifat Bilangan Berpangkat</h4>
         <div class="space-y-5 text-gray-300">
           
-          <!-- Fase 1: Orientasi Masalah -->
+          <!-- Fase 1: Orientasi dan Merumuskan Masalah -->
           <div class="bg-blue-500/10 p-5 rounded-lg border border-blue-500/30">
             <p class="font-bold text-lg text-cyan-300 mb-3 flex items-center gap-2">
               <span>1️⃣</span> Orientasi dan Merumuskan Masalah
             </p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">🔋 Kasus: Pembagian Baterai HP</p>
-              <p class="text-base md:text-lg mb-2">Baterai HP kamu penuh 100%. Setiap jam, daya berkurang menjadi setengahnya karena main game:</p>
-              <p class="text-base md:text-lg mb-2">• Jam ke-3: 100% ÷ 2³ = 100% ÷ 8 = 12.5%</p>
-              <p class="text-base md:text-lg mb-2">• Jam ke-2: 100% ÷ 2² = 100% ÷ 4 = 25%</p>
-              <p class="text-base md:text-lg">• Jam ke-1: 100% ÷ 2¹ = 100% ÷ 2 = 50%</p>
+              <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">🖼️ Kasus: Editing Foto</p>
+              <p class="text-base md:text-lg mb-2">Kamu sedang mengedit foto di aplikasi desain. Tombol “Skala” bekerja eksponensial dengan basis 2.</p>
+              <p class="text-base md:text-lg mb-1">• Skala 1: ukuran foto = 2<sup>1</sup> (2x)</p>
+              <p class="text-base md:text-lg mb-1">• Skala 2: ukuran foto = 2<sup>2</sup> (4x)</p>
+              <p class="text-base md:text-lg">• Skala 3: ukuran foto = 2<sup>3</sup> (8x)</p>
             </div>
-            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Berapa persen baterai di jam ke-0 (saat penuh)? Bagaimana dengan 1 jam SEBELUM diisi (jam ke -1)?</p>
-            <p class="text-sm md:text-base text-gray-400 mt-2 italic">💭 Pikirkan: Apa arti 2⁰ dan 2⁻¹?</p>
+            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Kamu sudah memperbesar 3 tingkat lalu menambah 2 tingkat lagi. Jadi berapa kali lipat ukurannya? Apa yang terjadi jika kamu menekan tombol reset atau zoom out?</p>
           </div>
           
           <!-- Fase 2: Merumuskan Hipotesis -->
@@ -1497,38 +1488,25 @@
             <p class="font-bold text-lg text-green-300 mb-3 flex items-center gap-2">
               <span>2️⃣</span> Merumuskan Hipotesis
             </p>
-            <p class="text-base md:text-lg mb-3">🔍 Mari amati pola penurunan daya baterai:</p>
+            <p class="text-base md:text-lg mb-3">🔍 Mari kita amati polanya:</p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <ul class="space-y-2 text-base md:text-lg">
-                <li>• 2³ = 8 (jam ke-3)</li>
-                <li>• 2² = 4 (jam ke-2, dibagi 2)</li>
-                <li>• 2¹ = 2 (jam ke-1, dibagi 2 lagi)</li>
-                <li>• × = ? (jam ke-0, mungkin dibagi 2 lagi = 1?)</li>
-                <li>• 2⁻¹ = ? (1 jam sebelum isi, mungkin <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span>?)</li>
-              </ul>
+              <p class="text-base md:text-lg mb-2"><strong>Loncatan total:</strong> 3 tingkat + 2 tingkat = 5 tingkat.</p>
+              <p class="text-base md:text-lg">Jika diperbesar berturut-turut, pangkatnya ditambah.</p>
             </div>
             <p class="text-base md:text-lg font-semibold text-green-300 mb-2">💡 Hipotesis:</p>
-            <p class="text-base md:text-lg">"Setiap pangkat turun 1, hasilnya dibagi basis. Maka × = 1 dan 2⁻¹ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span>!"</p>
+            <p class="text-base md:text-lg">2<sup>3</sup> × 2<sup>2</sup> = 2<sup>3+2</sup> = 2<sup>5</sup></p>
           </div>
           
           <!-- Fase 3: Mengumpulkan Data -->
           <div class="bg-yellow-500/10 p-5 rounded-lg border border-yellow-500/30">
             <p class="font-bold text-lg text-yellow-300 mb-3 flex items-center gap-2">
-              <span>3🔬</span> Mengumpulkan Data
+              <span>3️⃣</span> Mengumpulkan Data
             </p>
-            <p class="text-base md:text-lg mb-3">🧪 <strong>Eksperimen:</strong> Coba dengan basis berbeda di kalkulator eksplorasi!</p>
+            <p class="text-base md:text-lg mb-3">🧪 <strong>Uji dengan kalkulator interaktif:</strong></p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg mb-2"><strong>Test Pangkat Nol:</strong></p>
               <ul class="list-disc list-inside space-y-1 ml-4 text-base md:text-lg">
-                <li>3⁰ = ?</li>
-                <li>5⁰ = ?</li>
-                <li>10⁰ = ?</li>
-              </ul>
-              <p class="text-base md:text-lg mb-2 mt-3"><strong>Test Pangkat Negatif:</strong></p>
-              <ul class="list-disc list-inside space-y-1 ml-4 text-base md:text-lg">
-                <li>2⁻¹ = ? (setengah dari 2⁰)</li>
-                <li>2⁻² = ? (setengah dari 2⁻¹)</li>
-                <li>3⁻¹ = ?</li>
+                <li><strong>Pangkat 0 (tombol reset):</strong> 2<sup>3</sup> lalu dibatalkan dengan 2<sup>3</sup></li>
+                <li><strong>Pangkat negatif (zoom out):</strong> dari 2<sup>0</sup> lalu kecilkan 2 tingkat</li>
               </ul>
             </div>
           </div>
@@ -1538,51 +1516,34 @@
             <p class="font-bold text-lg text-purple-300 mb-3 flex items-center gap-2">
               <span>4✅</span> Menguji Hipotesis
             </p>
-            <p class="text-base md:text-lg mb-3">📊 <strong>Hasil Pengujian:</strong></p>
+            <p class="text-base md:text-lg mb-3">Selesaikan tantangan workflow desain berikut:</p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg mb-2"><strong>Pangkat Nol:</strong></p>
-              <ul class="space-y-2 ml-4">
-                <li>✓ 2⁰ = 1 (100% baterai = 1 × 100%) ✅</li>
-                <li>✓ 3⁰ = 1</li>
-                <li>✓ 10⁰ = 1</li>
-                <li>✓ <strong>Semua bilangan pangkat 0 = 1!</strong></li>
-              </ul>
+              <p class="text-base md:text-lg mb-2">Sebuah objek diperbesar 2<sup>4</sup>, lalu diperkecil 2<sup>6</sup>, terakhir diperbesar 2<sup>2</sup>.</p>
+              <p class="text-base md:text-lg">Hitung 2<sup>4</sup> × 2<sup>-6</sup> × 2<sup>2</sup> = 2<sup>4-6+2</sup> = 2<sup>0</sup></p>
             </div>
-            <div class="bg-black/20 p-4 rounded-lg">
-              <p class="text-base md:text-lg mb-2"><strong>Pangkat Negatif:</strong></p>
-              <ul class="space-y-2 ml-4">
-                <li>✓ 2⁻¹ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span> = 0.5 ✅</li>
-                <li>✓ × = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">4</span></span> = 0.25 ✅</li>
-                <li>✓ 2⁻³ = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">8</span></span> = 0.125 ✅</li>
-              </ul>
-            </div>
-            <p class="text-base md:text-lg font-semibold text-purple-300 mt-3">✅ Hipotesis terbukti benar!</p>
+            <p class="text-base md:text-lg font-semibold text-purple-300">Jika hasil ekuivalen, hipotesis terbukti benar.</p>
           </div>
           
-          <!-- Fase 5: Kesimpulan -->
+          <!-- Fase 5: Merumuskan Kesimpulan -->
           <div class="bg-red-500/10 p-5 rounded-lg border border-red-500/30">
             <p class="font-bold text-lg text-red-300 mb-3 flex items-center gap-2">
               <span>5📋</span> Merumuskan Kesimpulan
             </p>
-            <div class="bg-black/30 p-4 rounded-lg mb-3">
-              <p class="font-bold mb-2">📝 Kesimpulan Pangkat Nol:</p>
-              <p class="text-lg md:text-xl mb-2">a<sup>0</sup> = 1(untuk a ? 0)</p>
-              <p class="text-base text-gray-300">Bilangan apapun pangkat 0 = 1</p>
-            </div>
             <div class="bg-black/30 p-4 rounded-lg mb-4">
-              <p class="font-bold mb-2">📝 Kesimpulan Pangkat Negatif:</p>
-              <p class="text-lg md:text-xl mb-2">a<sup>-n</sup> = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">a<sup>n</sup></span></span></p>
-              <p class="text-base text-gray-300">Pangkat negatif = kebalikan dari pangkat positif</p>
+              <p class="text-base md:text-lg font-bold mb-3">🧩 Sifat Eksponen:</p>
+              <ul class="space-y-2 text-base md:text-lg">
+                <li><strong>Perkalian:</strong> a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></li>
+                <li><strong>Pembagian:</strong> a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m-n</sup></li>
+                <li><strong>Pangkat nol:</strong> a<sup>0</sup> = 1, a ≠ 0</li>
+                <li><strong>Pangkat negatif:</strong> a<sup>-n</sup> = <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">a<sup>n</sup></span></span></li>
+              </ul>
             </div>
             <div class="bg-black/30 p-4 rounded-lg">
               <p class="text-base md:text-lg font-bold mb-3">🌍 Aplikasi Nyata:</p>
               <ul class="space-y-3 text-base md:text-lg">
-                <li><strong>🔬 Sains:</strong> Ukuran mikroskopis: 10⁻⁶ m = 1 mikrometer (bakteri)</li>
-                <li><strong>⚡ Fisika:</strong> Konduktansi listrik (Ω⁻¹), percepatan (m/s² = m·s⁻²)</li>
-                <li><strong>💊 Medis:</strong> Dosis obat: 10⁻³ g = 1 miligram</li>
-                <li><strong>💻 Teknologi:</strong> Ukuran chip: 5 nanometer = 5×10⁻⁹ meter</li>
-                <li><strong>💰 Ekonomi:</strong> Inflasi negatif (deflasi), pertumbuhan negatif</li>
-                <li><strong>🌡️ Suhu:</strong> Skala logaritmik untuk pH, desibel (dB)</li>
+                <li><strong>💰 Investasi:</strong> Uang di bank tumbuh mengikuti pola (1.05)<sup>tahun</sup>.</li>
+                <li><strong>📶 Sinyal Wi-Fi:</strong> Semakin jauh dari router, kekuatan sinyal menyusut (pangkat negatif).</li>
+                <li><strong>🎮 Skor Game:</strong> Skor × 2<sup>combo</sup>, semakin besar combo, semakin besar skor.</li>
               </ul>
             </div>
           </div>
@@ -1592,55 +1553,49 @@
         <h4 class="text-2xl md:text-3xl font-bold mb-6 text-purple-300">📐 Pangkat Pecahan dan Bentuk Akar</h4>
         <div class="space-y-5 text-gray-300">
           
-          <!-- Fase 1: Orientasi Masalah -->
+          <!-- Fase 1: Orientasi dan Merumuskan Masalah -->
           <div class="bg-blue-500/10 p-5 rounded-lg border border-blue-500/30">
             <p class="font-bold text-lg text-cyan-300 mb-3 flex items-center gap-2">
               <span>1🎯</span> Orientasi dan Merumuskan Masalah
             </p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">📦 Kasus: Menghitung Sisi Kotak</p>
-              <p class="text-base md:text-lg mb-2">Kamu punya kotak kubik dengan volume 27 liter. Berapa panjang sisi kotak tersebut?</p>
-              <p class="text-base md:text-lg mb-2">📦 Volume kubus = sisi³</p>
-              <p class="text-base md:text-lg">📌 Jadi: sisi³ = 27</p>
-              <p class="text-base md:text-lg mt-2">Kita tahu sisi = ³√27 = 3 (karena 3³ = 27)</p>
+              <p class="text-base md:text-lg font-semibold text-cyan-200 mb-2">🎧 Kasus: Perencanaan Studio Musik Kedap Suara</p>
+              <p class="text-base md:text-lg mb-2">Seorang arsitek merancang studio musik berbentuk kubus. Volume harus tepat 27 m<sup>3</sup>.</p>
+              <p class="text-base md:text-lg mb-2">Kita tahu: Volume = sisi<sup>3</sup> = 27</p>
+              <p class="text-base md:text-lg">Maka sisi = <sup>3</sup>√27 = 3 meter (karena 3<sup>3</sup> = 27)</p>
             </div>
-            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Bagaimana dengan 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup>? Apakah sama dengan ³√27? Apa hubungan pangkat pecahan dengan akar?</p>
-            <p class="text-sm md:text-base text-gray-400 mt-2 italic">💡 Pikirkan: Mungkinkah ada pola matematika di sini?</p>
+            <p class="text-base md:text-lg font-semibold text-yellow-300">❓ Jika arsitek memasukkan 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup>, apakah hasilnya sama dengan <sup>3</sup>√27? Bagaimana hubungan pangkat pecahan dan akar?</p>
           </div>
           
           <!-- Fase 2: Merumuskan Hipotesis -->
           <div class="bg-green-500/10 p-5 rounded-lg border border-green-500/30">
             <p class="font-bold text-lg text-green-300 mb-3 flex items-center gap-2">
-              <span>2💡</span> Merumuskan Hipotesis
+              <span>2🧠</span> Merumuskan Hipotesis
             </p>
-            <p class="text-base md:text-lg mb-3">💭 Mari berpikir tentang hubungannya:</p>
+            <p class="text-base md:text-lg mb-3">🔍 Hubungkan dengan sifat eksponen:</p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <ul class="space-y-2 text-base md:text-lg">
-                <li>📌 ³√27 adalah bilangan yang jika dipangkatkan 3 = 27</li>
-                <li>📌 Jika 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> × 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> × 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 27¹ = 27</li>
-                <li>📌 Berarti 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> adalah bilangan yang dipangkatkan 3 = 27</li>
+                <li>• <sup>3</sup>√27 adalah bilangan yang jika dipangkatkan 3 hasilnya 27</li>
+                <li>• 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> × 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> × 27<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 27<sup>1</sup> = 27</li>
               </ul>
             </div>
             <p class="text-base md:text-lg font-semibold text-green-300 mb-2">🎯 Hipotesis:</p>
-            <p class="text-base md:text-lg">"Mungkin a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>√a! Pangkat pecahan <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span> sama dengan akar pangkat n!"</p>
+            <p class="text-base md:text-lg">a<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span></sup> = <sup>n</sup>√a. Pangkat pecahan <span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">n</span></span> adalah bentuk lain dari akar pangkat n.</p>
           </div>
           
           <!-- Fase 3: Mengumpulkan Data -->
           <div class="bg-yellow-500/10 p-5 rounded-lg border border-yellow-500/30">
             <p class="font-bold text-lg text-yellow-300 mb-3 flex items-center gap-2">
-              <span>3🔬</span> Mengumpuylkan Data
+              <span>3🔬</span> Mengumpulkan Data
             </p>
-            <p class="text-base md:text-lg mb-3">🧪 <strong>Eksperimen:</strong> Coba dengan kalkulator eksplorasi!</p>
+            <p class="text-base md:text-lg mb-3">🧪 <strong>Uji pada kasus lain:</strong></p>
             <div class="bg-black/20 p-4 rounded-lg mb-3">
-              <p class="text-base md:text-lg mb-2"><strong>Coba hitung:</strong></p>
               <ul class="list-disc list-inside space-y-1 ml-4 text-base md:text-lg">
-                <li>16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup> = ? (bandingkan dengan √16)</li>
-                <li>16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">4</span></span></sup> = ? (bandingkan dengan ⁴√16)</li>
-                <li>8<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = ? (bandingkan dengan ³√8)</li>
-                <li>4<sup class="sup-frac"><span class="frac"><span class="num">3</span><span class="bar"></span><span class="den">2</span></span></sup> = ? (coba √(4³) atau (√4)³)</li>
+                <li><strong>Uji luas:</strong> Luas lantai 16 m<sup>2</sup>. Bandingkan 16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup> dengan √16.</li>
+                <li><strong>Uji mikro-chip:</strong> Volume 8 mm<sup>3</sup>. Bandingkan 8<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> dengan <sup>3</sup>√8.</li>
+                <li><strong>Uji kombinasi:</strong> Bandingkan 4<sup class="sup-frac"><span class="frac"><span class="num">3</span><span class="bar"></span><span class="den">2</span></span></sup> dengan (√4)<sup>3</sup>.</li>
               </ul>
             </div>
-            <p class="text-base md:text-lg italic text-gray-400">💡 Tip: Perhatikan apakah hasilnya sama dengan operasi akar!</p>
           </div>
           
           <!-- Fase 4: Menguji Hipotesis -->
@@ -1652,15 +1607,14 @@
             <div class="bg-black/20 p-4 rounded-lg mb-3">
               <ul class="space-y-2 ml-4 text-base md:text-lg">
                 <li>✓ 16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup> = 4 = √16 ✅</li>
-                <li>✓ 16<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">4</span></span></sup> = 2 = ⁴√16 ✅</li>
-                <li>✓ 8<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 2 = ³√8 ✅</li>
-                <li>✓ 4<sup class="sup-frac"><span class="frac"><span class="num">3</span><span class="bar"></span><span class="den">2</span></span></sup> = (√4)³ = 2³ = 8 ✅</li>
+                <li>✓ 8<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">3</span></span></sup> = 2 = <sup>3</sup>√8 ✅</li>
+                <li>✓ 4<sup class="sup-frac"><span class="frac"><span class="num">3</span><span class="bar"></span><span class="den">2</span></span></sup> = (√4)<sup>3</sup> = 2<sup>3</sup> = 8 ✅</li>
               </ul>
             </div>
-            <p class="text-base md:text-lg font-semibold text-purple-300">✅ Hipotesis terbukti! Ada hubungan pasti antara pangkat pecahan dan akar!</p>
+            <p class="text-base md:text-lg font-semibold text-purple-300">✅ Hipotesis terbukti benar!</p>
           </div>
           
-          <!-- Fase 5: Kesimpulan -->
+          <!-- Fase 5: Merumuskan Kesimpulan -->
           <div class="bg-red-500/10 p-5 rounded-lg border border-red-500/30">
             <p class="font-bold text-lg text-red-300 mb-3 flex items-center gap-2">
               <span>5📋</span> Merumuskan Kesimpulan
@@ -1678,12 +1632,10 @@
             <div class="bg-black/30 p-4 rounded-lg">
               <p class="text-base md:text-lg font-bold mb-3">🌍 Aplikasi Nyata:</p>
               <ul class="space-y-3 text-base md:text-lg">
-                <li><strong>🏗️ Arsitektur:</strong> Menghitung dimensi ruangan dari volume/luas</li>
-                <li><strong>📐 Geometri:</strong> Diagonal persegi = sisi × √2</li>
-                <li><strong>🎵 Musik:</strong> Interval nada: 2<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">12</span></span></sup>, 2<sup class="sup-frac"><span class="frac"><span class="num">2</span><span class="bar"></span><span class="den">12</span></span></sup>, dst.</li>
-                <li><strong>⚡ Fisika:</strong> Kecepatan gelombang = √(tegangan/massa)</li>
-                <li><strong>📊 Statistik:</strong> Standar deviasi = √(varians)</li>
-                <li><strong>💰 Keuangan:</strong> Rata-rata geometrik: (a×b)<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup></li>
+                <li><strong>📐 Geometri:</strong> Diagonal sisi persegi = sisi × √2.</li>
+                <li><strong>🎵 Musik:</strong> Interval nada pada piano menggunakan 2<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">12</span></span></sup>.</li>
+                <li><strong>📊 Statistik:</strong> Standar deviasi menggunakan akar dari varians.</li>
+                <li><strong>💰 Keuangan:</strong> Rata-rata geometrik: (a × b)<sup class="sup-frac"><span class="frac"><span class="num">1</span><span class="bar"></span><span class="den">2</span></span></sup>.</li>
               </ul>
             </div>
           </div>
@@ -1694,37 +1646,37 @@
     // ==================== Question Bank ====================
     const questionBank = {
       1: [
-        { q: "Adi memiliki 4 kotak pensil. Setiap kotak berisi 4 pensil yang sama. Bentuk perpangkatan dari jumlah pensil tersebut adalah …", options: ["3⁴", "4³", "3 × 4", "4²"], correct: 3, hint: "Perhatikan perkalian berulang dari isi setiap kotak.", explanation: "4 × 4 = 4² = 16." },
-        { q: "Sebuah lampu menyala 2 kali lebih terang setiap jam. Setelah 3 jam, faktor peningkatan terang lampu dapat ditulis sebagai …", options: ["2 + 3", "2 × 3", "2³", "3²"], correct: 2, hint: "Kata “dua kali setiap jam” menunjukkan perkalian berulang.", explanation: "2 × 2 × 2 = 2³ = 8." },
-        { q: "Paman memiliki 3 jenis ikan, setiap jenis ada 3 ekor. Bentuk yang tepat adalah …", options: ["3 + 3", "9", "3²", "2³"], correct: 2, hint: "Perhatikan bilangan yang dikalikan dengan dirinya sendiri.", explanation: "3 × 3 = 3² = 9." },
-        { q: "Pola bilangan 2, 4, 8, 16, … Bilangan ke-5 adalah …", options: ["18", "24", "32", "64"], correct: 2, hint: "Setiap bilangan dikali 2.", explanation: "16 × 2 = 32." },
-        { q: "Dalam lomba estafet digital, jumlah pesan yang diterima siswa selalu menjadi dua kali lipat setiap tahapnya. Jika tahap berlangsung sebanyak 5 kali, model matematika yang tepat adalah …", options: ["2⁵", "5²", "10²", "2 × 5"], correct: 0, hint: "Perhatikan kalimat “menjadi dua kali lipat setiap tahap”.", explanation: "Dua kali lipat 5 kali → 2⁵ = 32." }
+        { q: "Jika pada putaran pertama ada 3 orang baru yang tahu kedaimu, dan tren ini berlanjut di mana setiap orang wajib mengajak 3 orang lainnya, bentuk perpangkatan untuk putaran keempat adalah...", options: ["3 × 4", "3 + 3 + 3 + 3", "4³", "3⁴"], correct: 3, hint: "Basis adalah jumlah orang, pangkat adalah putaran.", explanation: "3 × 3 × 3 × 3 = 3⁴." },
+        { q: "Di sebuah grup kelas berisi 5 orang, masing-masing mengirim pesan ke 5 grup lainnya. Pada putaran ketiga, jumlah pesan yang tersebar adalah...", options: ["15", "25", "75", "125"], correct: 3, hint: "Hitung 5 × 5 × 5.", explanation: "5³ = 125 pesan." },
+        { q: "Satu sel virus COVID-19 membelah diri menjadi 2 setiap jam. Jika awalnya ada 1 virus, berapa jumlah virus setelah 7 jam?", options: ["2 × 7 = 14", "7² = 49", "2⁶ = 64", "2⁷ = 128"], correct: 3, hint: "Gunakan rumus a^n dengan a=2, n=7.", explanation: "2⁷ = 128 virus." },
+        { q: "Mengapa kapasitas memori HP selalu melonjak dari 64GB ke 128GB lalu ke 256GB? Hal ini karena memori mengikuti pola 2^n. Jika ada varian memori tepat di atas 512GB, kapasitasnya adalah...", options: ["600GB", "768GB", "1024GB", "2048GB"], correct: 2, hint: "Kalikan kapasitas sebelumnya dengan 2.", explanation: "512 × 2 = 1024 (2⁹ ke 2¹⁰)." },
+        { q: "Dalam sistem Member Get Member, jika polanya adalah a^n (dengan a adalah jumlah orang yang diajak). Manakah yang memberikan dampak \"serbuan\" pelanggan paling besar di putaran ke-3?", options: ["Setiap orang mengajak 2 orang", "Setiap orang mengajak 3 orang", "Setiap orang mengajak 4 orang", "Setiap orang mengajak 5 orang"], correct: 3, hint: "Bandingkan hasil 2³, 3³, 4³, dan 5³.", explanation: "5³ = 125, paling besar." }
       ],
       2: [
-        { q: "Ani menabung setiap hari. Suatu hari Ani tidak menabung sama sekali. Kondisi tersebut dapat dimodelkan dengan 8⁰. Nilainya adalah …", options: ["0", "1", "8", "64"], correct: 1, hint: "Pangkat nol selalu menghasilkan 1.", explanation: "8⁰ = 1." },
-        { q: "Satu pizza dibagi rata untuk 4 anak. Bagian setiap anak dapat ditulis sebagai 4⁻¹. Nilainya adalah …", options: ["4", "1/4", "-4", "1/16"], correct: 1, hint: "Pangkat negatif berarti kebalikan (invers).", explanation: "4⁻¹ = 1/4." },
-        { q: "Jika sebuah cokelat dibagi rata kepada 2 orang, bagian setiap orang dapat ditulis sebagai …", options: ["2¹", "2⁰", "2⁻¹", "1²"], correct: 2, hint: "Pembagian sama dengan pangkat negatif.", explanation: "2⁻¹ = 1/2." },
-        { q: "Seorang siswa membagi 1 liter air ke dalam 8 botol kecil dengan ukuran yang sama. Banyak air di setiap botol dapat dinyatakan dalam bentuk …", options: ["8 liter", "8⁰ liter", "8⁻¹ liter", "1⁸ liter"], correct: 2, hint: "Membagi 1 dengan 8 sama artinya dengan kebalikan dari 8.", explanation: "8⁻¹ = 1/8 liter." },
-        { q: "Nilai dari 6⁻¹ × 6¹ adalah …", options: ["0", "1", "6", "36"], correct: 1, hint: "Jika basis sama, pangkat dijumlahkan.", explanation: "6⁻¹ × 6¹ = 6⁰ = 1." }
+        { q: "Kamu menekan tombol skala zoom (basis 2) sebanyak 4 tingkat (2⁴), lalu karena terlalu besar kamu menekan tombol kecilkan 2 tingkat (2⁻²). Berapakah ukuran fotonya sekarang…", options: ["2⁻² kali lipat", "2² kali lipat", "2⁶ kali lipat", "2⁸ kali lipat"], correct: 1, hint: "Perkalian eksponen = pangkat dijumlahkan.", explanation: "2⁴ × 2⁻² = 2^(4-2) = 2²." },
+        { q: "Seorang editor foto melakukan zoom in berulang-ulang hingga mencapai skala 2⁵. Agar foto kembali ke ukuran asli (skala 1), apa yang harus dilakukan editor tersebut?", options: ["Menekan zoom out 5 tingkat (2⁻⁵)", "Menekan tombol reset sehingga menjadi 2¹", "Mengurangi skala sebanyak 5 (2^(5-5))", "Menekan zoom in 1 tingkat lagi"], correct: 0, hint: "Pangkat nol (a⁰=1) adalah target reset.", explanation: "2⁵ × 2⁻⁵ = 2⁰ = 1." },
+        { q: "Kekuatan sinyal Wi-Fi menyusut mengikuti pola pangkat negatif 2^-n setiap menjauh 5 meter. Jika pada jarak tertentu kekuatannya adalah 2⁻³, dan kamu menjauh lagi hingga pangkatnya berkurang 2 tingkat, bentuk sederhananya adalah…", options: ["2⁻⁶", "2⁻⁵", "2⁻¹", "2¹"], correct: 1, hint: "Semakin jauh, pangkat negatif bertambah.", explanation: "2⁻³ × 2⁻² = 2⁻⁵." },
+        { q: "Skor sebuah game dihitung dengan Skor × 2^combo. Jika kamu sudah memiliki 2³ combo dan mendapatkan bonus tambahan 2⁴ combo melalui perkalian item, total pengali skor kamu menjadi…", options: ["2¹", "2⁷", "2¹²", "4⁷"], correct: 1, hint: "Ingat sifat a^m × a^n = a^(m+n).", explanation: "2³ × 2⁴ = 2⁷." },
+        { q: "Sebuah objek grafis mengalami proses: diperbesar 2⁵, dibagi dengan skala 2², lalu diperkecil 2⁻¹. Bentuk paling sederhana dari total skala objek tersebut adalah…", options: ["2²", "2⁴", "2⁶", "2⁸"], correct: 0, hint: "Basis sama, gabungkan semua pangkatnya.", explanation: "2⁵ ÷ 2² × 2⁻¹ = 2^(5-2-1) = 2²." }
       ],
       3: [
-        { q: "Sebuah taman bunga berbentuk persegi memiliki luas 150 m². Panjang sisi taman dalam bentuk akar paling sederhana adalah …", options: ["√50 meter", "5√6 meter", "√75 meter", "15√2 meter"], correct: 1, hint: "s = √L. Cari faktor kuadrat sempurna dari 150 untuk menyederhanakan.", explanation: "√150 = √(25 × 6) = 5√6." },
-        { q: "Sebuah kotak kayu berbentuk kubus memiliki volume 125 cm³. Jika panjang rusuk kubus dinyatakan dalam notasi pangkat pecahan, maka …", options: ["5 cm", "25 cm", "125^(1/2) cm", "15 cm"], correct: 0, hint: "a^(1/3) = akar pangkat tiga dari a.", explanation: "s = 125^(1/3) = 5 (karena 5³ = 125)." },
-        { q: "Daya pancar komponen pemancar mengikuti rumus P = I^(3/2). Jika arus I = 4 A, maka daya P adalah …", options: ["4 Watt", "8 Watt", "16 Watt", "32 Watt"], correct: 1, hint: "I^(3/2) = (√I)^3.", explanation: "4^(3/2) = (√4)^3 = 2³ = 8." },
-        { q: "Kolam ikan berbentuk lingkaran memiliki luas 154 m². Rumus jari-jari: r = √(L/π). Bentuk paling sederhana r adalah …", options: ["7 meter", "14 meter", "√49 meter", "10 meter"], correct: 0, hint: "Substitusikan L ke rumus, gunakan π = 22/7 lalu sederhanakan.", explanation: "r = √(154 ÷ (22/7)) = √(154 × 7/22) = √49 = 7." },
-        { q: "Pertumbuhan koloni bakteri: N = 3^(t/3), t dalam jam. Jumlah bakteri setelah 9 jam adalah …", options: ["3 bakteri", "27 bakteri", "9 bakteri", "81 bakteri"], correct: 1, hint: "Substitusikan t = 9.", explanation: "N = 3^(9/3) = 3³ = 27." }
+        { q: "Arsitek membutuhkan panjang sisi ruangan kubus dengan volume 64 m³. Jika input software menggunakan pangkat pecahan V^(1/3), maka panjang sisinya adalah...", options: ["64^(1/3) = 4 m", "64^(1/2) = 8 m", "64³ = 262.144 m", "64 × 1/3 = 21,3 m"], correct: 0, hint: "Ubah ke bentuk akar dan cari angka yang jika dipangkatkan hasilnya 64.", explanation: "³√64 = 4 karena 4³ = 64." },
+        { q: "Sebuah studio memiliki luas lantai persegi 25 m². Dalam perhitungan material, arsitek menggunakan rumus s = L^(1/2). Bentuk ini ekuivalen dengan...", options: ["∛25", "√25", "25 × 1/2", "25²"], correct: 1, hint: "Pangkat 1/2 identik dengan akar kuadrat.", explanation: "√25 = 5." },
+        { q: "Sebuah komponen mikro memiliki volume V. Panjang rusuknya dinyatakan dengan ∛V. Jika volume chip tersebut adalah 2⁹ mm³, maka panjang rusuknya dalam bentuk pangkat pecahan adalah...", options: ["(2⁹)^(1/2)", "(2⁹)^(1/3)", "(2⁹)³", "2⁹ × 3"], correct: 1, hint: "Akar pangkat n adalah pangkat 1/n.", explanation: "(2⁹)^(1/3) = 2³." },
+        { q: "Interval nada piano menggunakan rasio 2^(1/12). Jika sebuah nada mengalami kenaikan 12 interval, maka perbandingannya menjadi 2^(12/12). Ini berarti frekuensinya menjadi...", options: ["Tetap sama", "12 kali lipat", "2 kali lipat", "√12 kali lipat"], correct: 2, hint: "Lakukan pembagian untuk pangkatnya.", explanation: "2^(12/12) = 2¹ = 2 kali lipat." },
+        { q: "Dalam desain rumit, arsitek menemukan angka 8^(2/3). Bentuk ini jika diubah ke dalam bentuk akar dan disederhanakan adalah...", options: ["∛(8²) = 4", "√(8³) = 16√2", "∛8 = 2", "8 × 2/3 = 5,3"], correct: 0, hint: "Ingat a^(m/n) = (n√a)^m.", explanation: "8^(2/3) = (∛8)² = 2² = 4." }
       ],
       4: [
-        { q: "Sebuah server memiliki 5 rak penyimpanan. Setiap rak berisi 5 server, dan setiap server menyimpan 5 basis data. Bentuk perpangkatan yang menyatakan total basis data adalah …", options: ["5 × 3", "3⁵", "5³", "15"], correct: 2, hint: "Perhatikan perkalian berulang dari jumlah benda di setiap tingkatan.", explanation: "5 × 5 × 5 = 5³." },
-        { q: "Sebuah bakteri membelah diri menjadi 2 setiap jamnya. Setelah 5 jam, faktor peningkatan jumlah bakteri dapat ditulis sebagai …", options: ["2⁵", "5²", "2 × 5", "10²"], correct: 0, hint: "Kata “dua kali lipat setiap jam” menunjukkan perkalian berulang.", explanation: "Dalam bentuk perpangkatan ditulis 2⁵." },
-        { q: "Perhatikan pola bilangan berikut: 3, 9, 27, 81, … Bilangan ke-5 dari pola tersebut adalah …", options: ["162", "243", "100", "324"], correct: 1, hint: "Setiap bilangan berikutnya dikali dengan 3.", explanation: "Suku ke-5 = 81 × 3 = 243." },
-        { q: "Dalam sebuah eksperimen fisika, sebuah partikel kehilangan energinya hingga mencapai kondisi dasar yang dimodelkan dengan 12⁰. Nilai dari energi tersebut adalah …", options: ["0", "1", "12", "120"], correct: 1, hint: "Bilangan apa pun (kecuali nol) jika dipangkatkan nol selalu menghasilkan nilai yang sama.", explanation: "12⁰ = 1." },
-        { q: "Seorang apoteker membagi 1 gram obat ke dalam 6 dosis yang sama besar. Bagian setiap dosis dapat ditulis dalam bentuk perpangkatan yaitu …", options: ["6¹", "6⁻¹", "6⁰", "−6"], correct: 1, hint: "Pembagian atau kebalikan (invers) dapat dinyatakan dengan pangkat negatif.", explanation: "1 ÷ 6 = 6⁻¹." },
-        { q: "Operasi pangkat: hasil dari operasi 7⁻² × 7² adalah …", options: ["0", "1", "7", "49"], correct: 1, hint: "Jika basisnya sama dan dikalikan, jumlahkan pangkatnya.", explanation: "7⁻² × 7² = 7⁰ = 1." },
-        { q: "Luas sebuah gudang berbentuk persegi adalah 200 m². Panjang sisi gudang tersebut dalam bentuk akar yang paling sederhana adalah …", options: ["10 meter", "10√2 meter", "50 meter", "100 meter"], correct: 1, hint: "Gunakan rumus s = √L dan cari faktor bilangan kuadrat sempurna.", explanation: "√200 = √(100 × 2) = 10√2." },
-        { q: "Sebuah kotak kado berbentuk kubus memiliki volume 216 cm³. Jika panjang rusuknya dinyatakan dalam pangkat pecahan, maka bentuknya adalah …", options: ["216^(1/3) cm", "216^(1/2) cm", "216^(2/3) cm", "216^(1/6) cm"], correct: 0, hint: "Pangkat 1/3 sama artinya dengan akar pangkat tiga.", explanation: "s = 216^(1/3) = 6 cm." },
-        { q: "Daya listrik (P) pada sebuah alat mengikuti rumus P = I^(1,5) = I^(3/2). Jika kuat arus (I) adalah 16 Ampere, maka daya yang dihasilkan adalah …", options: ["16 Watt", "32 Watt", "64 Watt", "128 Watt"], correct: 2, hint: "Ubah pangkat desimal 1,5 menjadi pecahan 3/2.", explanation: "16^(3/2) = (√16)³ = 4³ = 64." },
-        { q: "Jari-jari sebuah kolam ikan dinyatakan dengan rumus r = √(L/π). Jika luas kolam (L) adalah 616 m² dan π = 22/7, maka jari-jarinya adalah …", options: ["7 meter", "14 meter", "21 meter", "28 meter"], correct: 1, hint: "Substitusikan nilai ke rumus, balikkan pecahan pembagi, lalu tarik akarnya.", explanation: "r = √(616 ÷ (22/7)) = √(616 × 7/22) = √196 = 14." }
+        { q: "Jika promo “Member Get Member” kedai jus anda menggunakan aturan setiap pelanggan mengajak 4 orang baru (a = 4), maka pada putaran ketiga berapa jumlah pelanggan baru yang datang?", options: ["4 × 3 = 12 orang", "3⁴ = 81 orang", "4³ = 64 orang", "4 + 4 + 4 = 12 orang"], correct: 2, hint: "Gunakan pola pertumbuhan eksponensial a^n.", explanation: "Jumlah pelanggan baru = 4³ = 64 orang." },
+        { q: "Dalam promosi jus, anda menyadari bahwa pola 3^n menghasilkan 243 orang pada putaran tertentu. Putaran ke berapakah itu?", options: ["Putaran ke-3", "Putaran ke-4", "Putaran ke-5", "Putaran ke-6"], correct: 2, hint: "Ubah 243 menjadi bentuk pangkat dari 3.", explanation: "243 = 3⁵ sehingga n = 5." },
+        { q: "Sebuah server memiliki kapasitas 2¹² GB. Karena data yang digunakan kapasitasnya ditingkatkan menjadi 8 kali lipat. Tentukan bentuk pangkat baru dari kapasitas tersebut!", options: ["2¹⁵", "2²⁰", "2⁹⁶", "16¹²"], correct: 0, hint: "Ubah 8 ke bentuk pangkat dua.", explanation: "8 = 2³ sehingga kapasitas baru = 2¹² × 2³ = 2¹⁵ GB." },
+        { q: "Saat mengedit foto, anda menerapkan filter “clarify” yang menaikkan skala 2³, lalu filter “bloom” yang menaikkan lagi 2². Karena terlalu terang, anda menurunkan skala “zoom out” sebesar 2⁻⁴. Tentukan skala akhir skala foto tersebut.", options: ["2⁹", "2⁵", "2¹", "2⁰"], correct: 2, hint: "Gunakan sifat perkalian pangkat dengan basis sama.", explanation: "2³ × 2² × 2⁻⁴ = 2^(3+2-4) = 2¹." },
+        { q: "Dua objek memiliki skala masing-masing 2⁷ dan 2³. Tentukan rasio ukuran objek pertama terhadap objek kedua.", options: ["2¹⁰", "2⁴", "2²¹", "2⁻⁴"], correct: 1, hint: "Gunakan sifat pembagian pangkat.", explanation: "2⁷ ÷ 2³ = 2^(7-3) = 2⁴." },
+        { q: "Sebuah kode enkripsi mengikuti pola (2²)³. Bentuk paling sederhana dari kode tersebut jika dikaitkan dengan sifat pangkat adalah…", options: ["2⁵", "2⁶", "2⁸", "2¹"], correct: 1, hint: "Gunakan sifat pangkat dari pangkat.", explanation: "(2²)³ = 2^(2×3) = 2⁶." },
+        { q: "Arsitek studio music menentukan bahwa untuk meredam suara rendah diperlukan panel akustik dengan ketebalan 81^(1/4) cm. Ketebalan panel tersebut setara dengan nilai…", options: ["3 cm", "9 cm", "20,25 cm", "27 cm"], correct: 0, hint: "Ubah 81 menjadi pangkat dari 3.", explanation: "81 = 3⁴ sehingga 81^(1/4) = 3 cm." },
+        { q: "Dalam denah digital, luas suatu bidang tanah ditulis √144 m². Jika arsitek ingin mengubah penulisan tersebut kedalam bentuk pangkat pecahan agar terbaca oleh system, maka penulisannya menjadi…", options: ["144^(1/3)", "144²", "144^(1/2)", "12^(1/2)"], correct: 2, hint: "Ingat bahwa √a = a^(1/2).", explanation: "√144 = 144^(1/2)." },
+        { q: "Sebuah riset menunjukkan pertumbuhan ekonomi sebuah UMKM mengikuti pola 32^(2/5). Nilai ekuivalen dari pertumbuhan tersebut adalah…", options: ["2", "4", "8", "16"], correct: 1, hint: "Ubah 32 menjadi pangkat dari 2.", explanation: "32 = 2⁵ sehingga (2⁵)^(2/5) = 2² = 4." },
+        { q: "Seorang komposer menghitung frekuensi nada dengan rumus 16^(3/4). Jika dihitung menggunakan bentuk akar a^(m/n), maka hasil akhir frekuensinya adalah...", options: ["4", "6", "8", "12"], correct: 2, hint: "Ubah 16 menjadi 2⁴.", explanation: "(2⁴)^(3/4) = 2³ = 8." }
       ]
     };
 
