@@ -380,8 +380,11 @@
     #material-content [class*="bg-yellow-500/10"],
     #material-content [class*="bg-purple-500/10"],
     #material-content [class*="bg-red-500/10"] {
-      background: rgba(15, 23, 42, 0.5);
-      border: 1px solid rgba(148, 163, 184, 0.16);
+      background: transparent;
+      border-width: 0 0 0 3px;
+      border-color: rgba(125, 211, 252, 0.34);
+      border-radius: 0;
+      padding: 0.35rem 0 0.35rem 1rem;
     }
 
     #material-content thead[class*="bg-white/10"] {
@@ -396,15 +399,35 @@
       padding: 0;
     }
 
+    #material-content>h4 {
+      margin-bottom: 1rem;
+    }
+
+    #material-content .space-y-5 > :not([hidden]) ~ :not([hidden]) {
+      margin-top: 1.35rem;
+    }
+
     #material-content [class*="bg-black/20"] {
-      background: rgba(15, 23, 42, 0.22);
+      background: transparent;
       border: 0;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
+      border-radius: 0;
+      padding: 0;
+    }
+
+    #material-content [class*="bg-black/30"] {
+      background: rgba(15, 23, 42, 0.18);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      box-shadow: none;
+    }
+
+    #material-content table {
+      background: rgba(15, 23, 42, 0.18);
+      border-radius: 0.75rem;
+      overflow: hidden;
     }
 
     #video-content .bg-black\/30 {
-      background: rgba(15, 23, 42, 0.22);
+      background: transparent;
       border: 0;
       box-shadow: none;
     }
