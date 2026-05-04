@@ -213,6 +213,21 @@
       margin-bottom: 0.65rem;
     }
 
+    .guide-card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(217, 226, 236, 0.62);
+      border-left: 5px solid var(--primary-blue);
+      box-shadow: var(--shadow-soft);
+    }
+
+    #guide-section .text-slate-100 {
+      color: var(--primary-blue-strong) !important;
+    }
+
+    #guide-section .text-slate-300 {
+      color: var(--text-muted) !important;
+    }
+
     @media (min-width: 768px) {
       .profile-section-block {
         margin-bottom: 1.5rem;
@@ -1276,117 +1291,50 @@
       </section>
 
       <section id="guide-section" class="space-y-6 mt-6">
-        <div class="card-glass rounded-2xl p-6 md:p-8">
+        <div class="card-glass guide-card rounded-2xl p-6 md:p-8">
           <h3 class="section-title mb-6 flex items-center gap-3">
-            <i class="fa-solid fa-book-bookmark text-2xl icon-fa"></i> Petunjuk Penggunaan Aplikasi XnRoot
+            <i class="fa-solid fa-book-bookmark text-2xl icon-fa"></i> PANDUAN SINGKAT PENGGUNAAN XNROOT
           </h3>
-          <div class="space-y-5">
+          <div class="space-y-6">
             <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">A. Tentang Aplikasi</h4>
+              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">📲 Cara Masuk</h4>
               <p class="text-sm md:text-base body-copy">
-                XnRoot adalah aplikasi pembelajaran matematika berbasis web dengan pendekatan inkuiri yang berfokus pada
-                materi perpangkatan dan bentuk akar. Aplikasi ini memadukan materi interaktif, video pembelajaran,
-                eksplorasi konsep, serta latihan soal berbasis permainan (gamifikasi) untuk membantu siswa memahami
-                konsep secara mendalam.
+                Buka aplikasi melalui link web untuk masuk ke Menu Utama.
               </p>
             </div>
+
             <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">B. Persiapan Sebelum Menggunakan Aplikasi</h4>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Pastikan perangkat (laptop/komputer/HP) terhubung dengan jaringan internet.</li>
-                <li>Gunakan browser yang direkomendasikan seperti Google Chrome atau Mozilla Firefox.</li>
-                <li>Disarankan menggunakan layar berukuran sedang hingga besar agar tampilan aplikasi lebih optimal.
-                </li>
-              </ol>
+              <h4 class="text-lg md:text-xl font-bold accent-label mb-3">📑 Pengenalan Menu</h4>
+              <div class="space-y-3 text-sm md:text-base text-slate-300">
+                <p><span class="font-bold text-slate-100">📚 Materi:</span> Untuk belajar konsep Eksponen &amp; Bentuk
+                  Akar.</p>
+                <p><span class="font-bold text-slate-100">📊 Evaluasi:</span> Untuk mengerjakan kuis atau soal latihan.
+                </p>
+                <p><span class="font-bold text-slate-100">🔍 Petunjuk:</span> Penjelasan fungsi tombol jika kamu
+                  bingung.</p>
+              </div>
             </div>
+
             <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">C. Halaman Awal Aplikasi</h4>
-              <p class="text-sm md:text-base body-copy">
-                Pada halaman awal aplikasi, pengguna akan melihat judul aplikasi XnRoot dan menu navigasi di bagian atas
-                layar. Untuk mulai menggunakan aplikasi, klik tombol "Lanjutkan!" yang tersedia di halaman awal.
+              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">🎯 Alur Belajar (Inquiry)</h4>
+              <p class="text-sm md:text-base body-copy mb-3">Agar cepat paham, ikuti urutan ini:</p>
+              <p class="text-sm md:text-base text-slate-100 font-semibold">
+                Pilih Materi -> Pahami Masalah -> Baca E-Module -> Jawab Tantangan Interaktif.
               </p>
             </div>
+
             <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">D. Menu Utama Aplikasi</h4>
-              <p class="text-sm md:text-base body-copy mb-2">Menu utama aplikasi terletak pada bagian atas halaman dan
-                terdiri dari:</p>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Beranda: Menampilkan halaman utama dan petunjuk penggunaan aplikasi.</li>
-                <li>Materi: Menampilkan materi pembelajaran interaktif dan Quest Arena.</li>
-                <li>CP/TP: Menampilkan Capaian Pembelajaran dan Tujuan Pembelajaran.</li>
-                <li>Inkuiri: Berisi materi pembelajaran berbasis inkuiri.</li>
-                <li>Peringkat: Menampilkan papan peringkat skor pengguna.</li>
-                <li>Developer: Menampilkan informasi pengembang aplikasi.</li>
-              </ol>
+              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">🧠 Uji Kemampuan</h4>
+              <p class="text-sm md:text-base body-copy">
+                Pilih menu Evaluasi, selesaikan soalnya dengan teliti, dan cek skor akhirmu sebagai hasil belajar.
+              </p>
             </div>
+
             <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">E. Materi Pembelajaran</h4>
-              <p class="text-sm md:text-base body-copy mb-2">Materi pembelajaran dalam aplikasi XnRoot terdiri dari:</p>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Perpangkatan Dasar.</li>
-                <li>Pangkat Nol dan Pangkat Negatif.</li>
-                <li>Pangkat Pecahan dan Bentuk Akar.</li>
-              </ol>
-              <p class="text-sm md:text-base body-copy mt-2">Pengguna dapat mempelajari materi secara berurutan dengan
-                menekan tombol setiap materi untuk berpindah ke materi berikutnya.</p>
-            </div>
-            <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">F. Video Pembelajaran</h4>
-              <p class="text-sm md:text-base body-copy mb-2">Pada setiap bagian materi tersedia video pembelajaran.</p>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Klik ikon video untuk memulai pemutaran.</li>
-                <li>Gunakan tombol play atau pause sesuai kebutuhan.</li>
-                <li>Setelah selesai menonton, pengguna dapat kembali ke materi atau melanjutkan ke tahap berikutnya.
-                </li>
-              </ol>
-            </div>
-            <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">G. Eksplorasi Interaktif</h4>
-              <p class="text-sm md:text-base body-copy">Fitur eksplorasi interaktif memungkinkan pengguna mencoba
-                langsung konsep perpangkatan dan bentuk akar dengan memasukkan nilai tertentu dan melihat hasilnya
-                secara langsung.</p>
-            </div>
-            <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">H. Quest Arena (Tantangan Matematika)</h4>
-              <p class="text-sm md:text-base body-copy mb-2">Quest Arena merupakan fitur latihan soal berbasis
-                permainan.</p>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Terdapat tiga level tantangan.</li>
-                <li>Setiap level berisi 5 soal dengan batas waktu tertentu.</li>
-                <li>Pilih jawaban yang dianggap benar untuk mendapatkan skor.</li>
-                <li>Skor akan ditampilkan setelah seluruh soal selesai dikerjakan.</li>
-              </ol>
-            </div>
-            <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">I. Skor, Badge, dan Peringkat</h4>
-              <p class="text-sm md:text-base body-copy mb-2">Aplikasi XnRoot menerapkan sistem gamifikasi.</p>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Setiap jawaban benar akan menambah skor.</li>
-                <li>Pengguna akan memperoleh badge berdasarkan aktivitas dan pencapaian tertentu.</li>
-                <li>Skor dan badge akan memengaruhi posisi pengguna pada menu Peringkat.</li>
-              </ol>
-            </div>
-            <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">J. Navigasi dan Tombol Penting</h4>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Menu Beranda: Digunakan untuk kembali ke halaman utama aplikasi.</li>
-                <li>Tombol Lanjutkan/Lanjut: Digunakan untuk berpindah ke halaman berikutnya.</li>
-                <li>Tombol Kembali: Digunakan untuk kembali ke halaman sebelumnya.</li>
-                <li>Tombol Mulai: Digunakan untuk memulai tantangan pada Quest Arena.</li>
-              </ol>
-            </div>
-            <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">K. Mengakhiri Penggunaan Aplikasi</h4>
-              <p class="text-sm md:text-base body-copy">Setelah selesai menggunakan aplikasi, pengguna dapat langsung
-                menutup tab atau jendela browser. Aplikasi tidak memerlukan proses logout.</p>
-            </div>
-            <div class="py-1">
-              <h4 class="text-lg md:text-xl font-bold accent-label mb-2">L. Tips Penggunaan</h4>
-              <ol class="list-decimal list-inside space-y-1 text-sm md:text-base text-slate-300">
-                <li>Pelajari materi secara berurutan sebelum mengerjakan tantangan.</li>
-                <li>Manfaatkan video pembelajaran untuk memperdalam pemahaman.</li>
-                <li>Ulangi latihan soal untuk meningkatkan skor dan memperoleh badge.</li>
-              </ol>
+              <p class="text-sm md:text-base body-copy">
+                <span class="font-bold accent-label">💡 Tips:</span> Belajarlah secara berurutan mulai dari materi
+                pertama agar logika matematikanya tersambung dengan baik.
+              </p>
             </div>
           </div>
         </div>
